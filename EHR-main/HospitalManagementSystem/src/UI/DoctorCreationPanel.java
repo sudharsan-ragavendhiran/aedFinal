@@ -14,13 +14,13 @@ public class DoctorCreationPanel extends javax.swing.JPanel {
     /**
      * Creates new form DoctorCreationPanel
      */
-    DoctorInfo docData;
+    DoctorInfo docInfo;
     String username;
-    public DoctorCreationPanel(String username, DoctorInfo docData) {
+    public DoctorCreationPanel(String username, DoctorInfo docInfo) {
         initComponents();
         
         this.username = username;
-        this.docData = docData;
+        this.docInfo = docInfo;
     }
 
     /**
@@ -323,9 +323,9 @@ public class DoctorCreationPanel extends javax.swing.JPanel {
         doc.setEmail(docEmail);
         doc.setPhoneNumber(docPhone);
         doc.setSpecialisation(docSpecialisation);
-        doc.setHospitalName(docData.searchHospNameInDb(username));
+        doc.setHospitalName(docInfo.searchHospNameInDb(username));
         
-        docData.createDoctorInDb(doc);
+        docInfo.createDoctorInDb(doc);
        UserInfo userData = new UserInfo();
         User p = userData.addNewUser();
             p.setName(docName);
@@ -333,7 +333,7 @@ public class DoctorCreationPanel extends javax.swing.JPanel {
             p.setRole("doctor");
             p.setOrg("hospital");
             p.setPassword(txtUsername1.getText());
-            p.setOrgName(docData.searchHospNameInDb(username));
+            p.setOrgName(docInfo.searchHospNameInDb(username));
             boolean res = userData.createUserInDb(p);
             if(!res){
                 JOptionPane.showMessageDialog(this,"retry" , "warning", HEIGHT);

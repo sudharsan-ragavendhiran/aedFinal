@@ -19,12 +19,12 @@ public class DoctorDetailsPanel extends javax.swing.JPanel {
      * Creates new form DoctorDetailsPanel
      */
     
-    DoctorInfo docData;
+    DoctorInfo docInfo;
     
-    public DoctorDetailsPanel(DoctorInfo docData) {
+    public DoctorDetailsPanel(DoctorInfo docInfo) {
         initComponents();
-        this.docData = docData;
-        populateTable();
+        this.docInfo = docInfo;
+        loadTableData();
     }
 
     /**
@@ -340,9 +340,9 @@ public class DoctorDetailsPanel extends javax.swing.JPanel {
         }
         DefaultTableModel model= (DefaultTableModel) DoctorTable.getModel();
         Doctor doc = (Doctor) model.getValueAt(selectedRowIndex, 0);
-        docData.deleteDoctor(doc);
+        docInfo.deleteDoctor(doc);
         JOptionPane.showMessageDialog(this, "Selected row deleted");
-        populateTable();
+        loadTableData();
         txtUsername.setText("");
         txtName.setText("");
         txtSpecialisation.setText("");
@@ -416,7 +416,7 @@ public class DoctorDetailsPanel extends javax.swing.JPanel {
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         txtSearchUser.setText("");
-        populateTable();
+        loadTableData();
         
         txtUsername.setText("");
         txtName.setText("");
@@ -442,7 +442,7 @@ public class DoctorDetailsPanel extends javax.swing.JPanel {
             stmt.executeUpdate(qry);
             qry="update DoctorData set useername = '"+newUsername+"', name = '"+newName+"', specialisation = '"+newSpecialisation+"', email = '"+newEmail+"', dob = '"+newDOB+"', gender = '"+newGender+"' where id = '"+newUsername+"'";
             stmt.executeUpdate(qry);
-            populateTable();
+            loadTableData();
              
         } catch (SQLException ex) {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
@@ -456,10 +456,10 @@ public class DoctorDetailsPanel extends javax.swing.JPanel {
         txtGender.setText("");
     }//GEN-LAST:event_btnUpdateActionPerformed
 
-    private void populateTable() {
+    private void loadTableData() {
             DefaultTableModel model= (DefaultTableModel) DoctorTable.getModel();
             model.setRowCount(0);
-            for(Doctor obj : docData.getDoctorInfoFromDb()){
+            for(Doctor obj : docInfo.getDoctorInfoFromDb()){
                 Object[] row= new Object[4];
                 row[0] = obj;
                 row[1] = obj.getSpecialisation();

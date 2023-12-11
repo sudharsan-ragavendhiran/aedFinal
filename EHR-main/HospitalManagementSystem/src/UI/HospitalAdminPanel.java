@@ -14,25 +14,23 @@ import Model.DoctorInfo;
 public class HospitalAdminPanel extends javax.swing.JPanel {
 
     /** Creates new form HospitalAdminPanel */
-    Color MouseEnterColor = new Color(255,102,102);
-    Color MouseExitColor = new Color(153,204,255);
-    EncounterInfo encData;
-    DoctorInfo docData;
+    EncounterInfo encInfo;
+    DoctorInfo docInfo;
     String username;
     public HospitalAdminPanel(String username) {
         initComponents();
         this.username = username;
-        this.encData = new EncounterInfo();
-        this.docData = new DoctorInfo();
-        populateEncounterTable();
-        populateDoctorTable();
+        this.encInfo = new EncounterInfo();
+        this.docInfo = new DoctorInfo();
+        loadEncounterData();
+        loadDoctorData();
     }
     
-    private void populateEncounterTable() {
+    private void loadEncounterData() {
         DefaultTableModel model = (DefaultTableModel) PatientTable.getModel();
         model.setRowCount(0);
 
-        for (Encounter encounter : encData.getEncounterInfoFromDb()) {
+        for (Encounter encounter : encInfo.getEncounterInfoFromDb()) {
             Object[] row = {encounter.getPatientUsername(), encounter.getBp(), encounter.getTemp(), encounter.getPulse()};
 //            row[0] = hospital.getName();
 //            row[1] = hospital.getCity();
@@ -42,11 +40,11 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
         }
     }
     
-    private void populateDoctorTable() {
+    private void loadDoctorData() {
         DefaultTableModel model = (DefaultTableModel) DoctorTable.getModel();
         model.setRowCount(0);
 
-        for (Doctor doctor : docData.getDoctorInfoFromDb()) {
+        for (Doctor doctor : docInfo.getDoctorInfoFromDb()) {
             Object[] row = {doctor.getName(), doctor.getSpecialisation()};
 //            row[0] = hospital.getName();
 //            row[1] = hospital.getCity();
@@ -343,7 +341,7 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
 
     private void lblCreateUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCreateUserMouseClicked
         // TODO add your handling code here:
-        DoctorManagementPanel  mdp = new DoctorManagementPanel(username, docData);
+        DoctorManagementPanel  mdp = new DoctorManagementPanel(username, docInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(mdp);
         login.invalidate();
@@ -352,17 +350,15 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
 
     private void lblCreateUserMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCreateUserMouseEntered
         // TODO add your handling code here:
-        lblCreateUser.setBackground(MouseEnterColor);
     }//GEN-LAST:event_lblCreateUserMouseEntered
 
     private void lblCreateUserMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCreateUserMouseExited
         // TODO add your handling code here:
-        lblCreateUser.setBackground(MouseExitColor);
     }//GEN-LAST:event_lblCreateUserMouseExited
 
     private void ManageDoctorJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageDoctorJPanelMouseClicked
         // TODO add your handling code here:
-        DoctorManagementPanel  mdp = new DoctorManagementPanel(username, docData);
+        DoctorManagementPanel  mdp = new DoctorManagementPanel(username, docInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(mdp);
         login.invalidate();
@@ -371,12 +367,10 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
 
     private void ManageDoctorJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageDoctorJPanelMouseEntered
         // TODO add your handling code here:
-        ManageDoctorJPanel.setBackground(MouseEnterColor);
     }//GEN-LAST:event_ManageDoctorJPanelMouseEntered
 
     private void ManageDoctorJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageDoctorJPanelMouseExited
         // TODO add your handling code here:
-        ManageDoctorJPanel.setBackground(MouseExitColor);
     }//GEN-LAST:event_ManageDoctorJPanelMouseExited
 
     private void ViewEncountersMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewEncountersMouseClicked
@@ -390,12 +384,10 @@ public class HospitalAdminPanel extends javax.swing.JPanel {
 
     private void ViewEncountersMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewEncountersMouseEntered
         // TODO add your handling code here:
-        ViewEncounters.setBackground(MouseEnterColor);
     }//GEN-LAST:event_ViewEncountersMouseEntered
 
     private void ViewEncountersMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewEncountersMouseExited
         // TODO add your handling code here:
-        ViewEncounters.setBackground(MouseExitColor);
     }//GEN-LAST:event_ViewEncountersMouseExited
 
     private void lblViewEncounterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblViewEncounterMouseClicked

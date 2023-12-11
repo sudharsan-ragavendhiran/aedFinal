@@ -15,11 +15,11 @@ public class EncounterDetailsPanel extends javax.swing.JPanel {
      * Creates new form EncounterDetailsPanel
      */
     String username;
-    EncounterInfo ed;
+    EncounterInfo encInf;
     public EncounterDetailsPanel(String username) {
         initComponents();
         this.username=username;
-        ed = new EncounterInfo();
+        encInf = new EncounterInfo();
         populateTable();
     }
 
@@ -375,7 +375,7 @@ public class EncounterDetailsPanel extends javax.swing.JPanel {
     private void populateTable() {
             DefaultTableModel model= (DefaultTableModel) PatientUsernameTable.getModel();
             model.setRowCount(0);
-            for(Encounter obj : ed.getEncounterInfoFromDb()){
+            for(Encounter obj : encInf.getEncounterInfoFromDb()){
                 Object[] row= new Object[4];
                 row[0] = obj;
                 row[1] = obj.getPatientUsername();

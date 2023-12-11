@@ -10,8 +10,6 @@ public class InsuranceEmployeeFinancePanel extends javax.swing.JPanel {
     /**
      * Creates new form InsuranceEmployeeFinancePanel
      */
-    Color MouseEnterColor = new Color(255,102,102);
-    Color MouseExitColor = new Color(153,204,255);
     String username;
     public InsuranceEmployeeFinancePanel(String username) {
         initComponents();
@@ -242,12 +240,10 @@ public class InsuranceEmployeeFinancePanel extends javax.swing.JPanel {
 
     private void lblUserCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserCreateMouseEntered
         // TODO add your handling code here:
-        lblUserCreate.setBackground(MouseEnterColor);
     }//GEN-LAST:event_lblUserCreateMouseEntered
 
     private void lblUserCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserCreateMouseExited
         // TODO add your handling code here:
-        lblUserCreate.setBackground(MouseExitColor);
     }//GEN-LAST:event_lblUserCreateMouseExited
 
     private void CreateUserJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseClicked
@@ -258,12 +254,10 @@ public class InsuranceEmployeeFinancePanel extends javax.swing.JPanel {
 
     private void CreateUserJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseEntered
         // TODO add your handling code here:
-        CreateUserJPanel.setBackground(MouseEnterColor);
     }//GEN-LAST:event_CreateUserJPanelMouseEntered
 
     private void CreateUserJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseExited
         // TODO add your handling code here:
-        CreateUserJPanel.setBackground(MouseExitColor);
     }//GEN-LAST:event_CreateUserJPanelMouseExited
 
     private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked

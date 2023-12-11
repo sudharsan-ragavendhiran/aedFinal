@@ -11,14 +11,12 @@ public class DoctorManagementPanel extends javax.swing.JPanel {
     /**
      * Creates new form DoctorManagementPanel
      */
-    Color MouseEnterColor = new Color(255,102,102);
-    Color MouseExitColor = new Color(153,204,255);
     String username;
-    DoctorInfo docData;
-    public DoctorManagementPanel(String username, DoctorInfo docData) {
+    DoctorInfo docInfo;
+    public DoctorManagementPanel(String username, DoctorInfo docInfo) {
         initComponents();
         this.username = username;
-        this.docData = docData;
+        this.docInfo = docInfo;
     }
 
     /**
@@ -287,66 +285,58 @@ public class DoctorManagementPanel extends javax.swing.JPanel {
 
     private void lblUserDoctorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserDoctorMouseClicked
         // TODO add your handling code here:
-        DoctorCreationPanel cd = new DoctorCreationPanel(username, docData);
+        DoctorCreationPanel cd = new DoctorCreationPanel(username, docInfo);
         jSplitPane1.setRightComponent(cd);
     }//GEN-LAST:event_lblUserDoctorMouseClicked
 
     private void lblUserDoctorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserDoctorMouseEntered
         // TODO add your handling code here:
-        lblUserDoctor.setBackground(MouseEnterColor);
     }//GEN-LAST:event_lblUserDoctorMouseEntered
 
     private void lblUserDoctorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserDoctorMouseExited
         // TODO add your handling code here:
-        lblUserDoctor.setBackground(MouseExitColor);
     }//GEN-LAST:event_lblUserDoctorMouseExited
 
     private void CreateUserJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseClicked
         // TODO add your handling code here:
-        DoctorCreationPanel cd = new DoctorCreationPanel(username, docData);
+        DoctorCreationPanel cd = new DoctorCreationPanel(username, docInfo);
         jSplitPane1.setRightComponent(cd);
     }//GEN-LAST:event_CreateUserJPanelMouseClicked
 
     private void CreateUserJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseEntered
         // TODO add your handling code here:
-        CreateUserJPanel.setBackground(MouseEnterColor);
     }//GEN-LAST:event_CreateUserJPanelMouseEntered
 
     private void CreateUserJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseExited
         // TODO add your handling code here:
-        CreateUserJPanel.setBackground(MouseExitColor);
     }//GEN-LAST:event_CreateUserJPanelMouseExited
 
     private void lblViewDoctorMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblViewDoctorMouseClicked
         // TODO add your handling code here:
-        DoctorDetailsPanel vdp = new DoctorDetailsPanel(docData);
+        DoctorDetailsPanel vdp = new DoctorDetailsPanel(docInfo);
         jSplitPane1.setRightComponent(vdp);
     }//GEN-LAST:event_lblViewDoctorMouseClicked
 
     private void lblViewDoctorMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblViewDoctorMouseEntered
         // TODO add your handling code here:
-        lblViewDoctor.setBackground(MouseEnterColor);
     }//GEN-LAST:event_lblViewDoctorMouseEntered
 
     private void lblViewDoctorMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblViewDoctorMouseExited
         // TODO add your handling code here:
-        lblViewDoctor.setBackground(MouseExitColor);
     }//GEN-LAST:event_lblViewDoctorMouseExited
 
     private void ViewDoctorJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewDoctorJPanelMouseClicked
         // TODO add your handling code here:
-        DoctorDetailsPanel vdp = new DoctorDetailsPanel(docData);
+        DoctorDetailsPanel vdp = new DoctorDetailsPanel(docInfo);
         jSplitPane1.setRightComponent(vdp);
     }//GEN-LAST:event_ViewDoctorJPanelMouseClicked
 
     private void ViewDoctorJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewDoctorJPanelMouseEntered
         // TODO add your handling code here:
-        ViewDoctorJPanel.setBackground(MouseEnterColor);
     }//GEN-LAST:event_ViewDoctorJPanelMouseEntered
 
     private void ViewDoctorJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewDoctorJPanelMouseExited
         // TODO add your handling code here:
-        ViewDoctorJPanel.setBackground(MouseExitColor);
     }//GEN-LAST:event_ViewDoctorJPanelMouseExited
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked

@@ -21,20 +21,19 @@ public class InsuranceFirmEmployeeMgmtPanel extends javax.swing.JPanel {
     /**
      * Creates new form InsuranceFirmEmployeeMgmtPanel
      */
-    Color MouseEnterColor = new Color(255,102,102);
-    Color MouseExitColor = new Color(153,204,255);
+   
     String username;
     UserInfo userData;
-    InsuranceClaimsInfo icD;
-    InsurancePolicyInfo ipD;
-    public InsuranceFirmEmployeeMgmtPanel(String username, UserInfo userData, InsuranceClaimsInfo icD, InsurancePolicyInfo ipD) {
+    InsuranceClaimsInfo insClaimsInfo;
+    InsurancePolicyInfo insPolicy;
+    public InsuranceFirmEmployeeMgmtPanel(String username, UserInfo userInfo, InsuranceClaimsInfo insClaimsInfo, InsurancePolicyInfo insPolicyData) {
         initComponents();
         this.username = username;
-        this.userData = userData;
-        this.icD = icD;
-        this.ipD = ipD;
-        populateEmployeeTable();
-        populateInsuranceTable();
+        this.userData = userInfo;
+        this.insClaimsInfo = insClaimsInfo;
+        this.insPolicy = insPolicyData;
+        loadEmployeeData();
+        loadInsuranceData();
     }
 
     /**
@@ -342,7 +341,7 @@ public class InsuranceFirmEmployeeMgmtPanel extends javax.swing.JPanel {
 
     private void lblCreateUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCreateUserMouseClicked
         // TODO add your handling code here:
-        InsuranceEmployeeManagementPanel  ime = new InsuranceEmployeeManagementPanel(username, userData, icD);
+        InsuranceEmployeeManagementPanel  ime = new InsuranceEmployeeManagementPanel(username, userData, insClaimsInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(ime);
         login.invalidate();
@@ -351,17 +350,15 @@ public class InsuranceFirmEmployeeMgmtPanel extends javax.swing.JPanel {
 
     private void lblCreateUserMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCreateUserMouseEntered
         // TODO add your handling code here:
-        lblCreateUser.setBackground(MouseEnterColor);
     }//GEN-LAST:event_lblCreateUserMouseEntered
 
     private void lblCreateUserMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCreateUserMouseExited
         // TODO add your handling code here:
-        lblCreateUser.setBackground(MouseExitColor);
     }//GEN-LAST:event_lblCreateUserMouseExited
 
     private void ManageUserJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageUserJPanelMouseClicked
         // TODO add your handling code here:
-        InsuranceEmployeeManagementPanel  ime = new InsuranceEmployeeManagementPanel(username, userData, icD);
+        InsuranceEmployeeManagementPanel  ime = new InsuranceEmployeeManagementPanel(username, userData, insClaimsInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(ime);
         login.invalidate();
@@ -370,17 +367,15 @@ public class InsuranceFirmEmployeeMgmtPanel extends javax.swing.JPanel {
 
     private void ManageUserJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageUserJPanelMouseEntered
         // TODO add your handling code here:
-        ManageUserJPanel.setBackground(MouseEnterColor);
     }//GEN-LAST:event_ManageUserJPanelMouseEntered
 
     private void ManageUserJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageUserJPanelMouseExited
         // TODO add your handling code here:
-        ManageUserJPanel.setBackground(MouseExitColor);
     }//GEN-LAST:event_ManageUserJPanelMouseExited
 
     private void ManageHospitalJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageHospitalJPanelMouseClicked
         // TODO add your handling code here:
-        MainInsuranceFirmMgmtPanel  hmi = new MainInsuranceFirmMgmtPanel(username, userData, icD, ipD);
+        MainInsuranceFirmMgmtPanel  hmi = new MainInsuranceFirmMgmtPanel(username, userData, insClaimsInfo, insPolicy);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(hmi);
         login.invalidate();
@@ -389,17 +384,15 @@ public class InsuranceFirmEmployeeMgmtPanel extends javax.swing.JPanel {
 
     private void ManageHospitalJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageHospitalJPanelMouseEntered
         // TODO add your handling code here:
-        ManageHospitalJPanel.setBackground(MouseEnterColor);
     }//GEN-LAST:event_ManageHospitalJPanelMouseEntered
 
     private void ManageHospitalJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageHospitalJPanelMouseExited
         // TODO add your handling code here:
-        ManageHospitalJPanel.setBackground(MouseExitColor);
     }//GEN-LAST:event_ManageHospitalJPanelMouseExited
 
     private void lblRegHospitalMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegHospitalMouseClicked
         // TODO add your handling code here:
-        MainInsuranceFirmMgmtPanel  hmi = new MainInsuranceFirmMgmtPanel(username, userData, icD, ipD);
+        MainInsuranceFirmMgmtPanel  hmi = new MainInsuranceFirmMgmtPanel(username, userData, insClaimsInfo, insPolicy);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(hmi);
         login.invalidate();
@@ -408,16 +401,14 @@ public class InsuranceFirmEmployeeMgmtPanel extends javax.swing.JPanel {
 
     private void lblRegHospitalMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegHospitalMouseEntered
         // TODO add your handling code here:
-        lblRegHospital.setBackground(MouseEnterColor);
     }//GEN-LAST:event_lblRegHospitalMouseEntered
 
     private void lblRegHospitalMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegHospitalMouseExited
         // TODO add your handling code here:
-        lblRegHospital.setBackground(MouseExitColor);
     }//GEN-LAST:event_lblRegHospitalMouseExited
 
 
-    private void populateEmployeeTable() {
+    private void loadEmployeeData() {
             DefaultTableModel model= (DefaultTableModel) EmployeeTable.getModel();
             model.setRowCount(0);
             for(User obj : userData.getEmployeesFromDb()){
@@ -431,10 +422,10 @@ public class InsuranceFirmEmployeeMgmtPanel extends javax.swing.JPanel {
 
     }  
     
-    private void populateInsuranceTable() {
+    private void loadInsuranceData() {
             DefaultTableModel model= (DefaultTableModel) InsuranceRequestTable.getModel();
             model.setRowCount(0);
-            for(InsuranceClaims obj : icD.getInsuranceClaimsInfoFromDb()){
+            for(InsuranceClaims obj : insClaimsInfo.getInsuranceClaimsInfoFromDb()){
                 Object[] row= new Object[2];
                 row[0] = obj;
                 row[1] = obj.getAmount();

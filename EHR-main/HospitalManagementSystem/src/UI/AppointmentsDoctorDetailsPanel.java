@@ -13,13 +13,13 @@ public class AppointmentsDoctorDetailsPanel extends javax.swing.JPanel {
     /**
      * Creates new form AppointmentsDoctorDetailsPanel
      */
-    UserInfo userData;
-    EncounterInfo encData;
-    String username;
-    public AppointmentsDoctorDetailsPanel(String username) {
+    UserInfo userInfo;
+    EncounterInfo encInfo;
+    String uname;
+    public AppointmentsDoctorDetailsPanel(String uname) {
         initComponents();
-        this.username = username;
-        populateTable();
+        this.uname = uname;
+        loadTable();
     }
 
     /**
@@ -67,15 +67,15 @@ public class AppointmentsDoctorDetailsPanel extends javax.swing.JPanel {
                 .addContainerGap(118, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
-private void populateTable() {
+private void loadTable() {
         DefaultTableModel model= (DefaultTableModel) AppointmentTable.getModel();
         model.setRowCount(0);
-        encData = new EncounterInfo();
-        userData = new UserInfo();
-        for(Encounter obj : encData.getEncounterInfoFromDbForDoctor(username,"encounter")){
+        encInfo = new EncounterInfo();
+        userInfo = new UserInfo();
+        for(Encounter obj : encInfo.getEncounterInfoFromDbForDoctor(uname,"encounter")){
             Object[] row= new Object[6];
             row[0] = obj;
-            row[1] = userData.searchOrgNameInDb(obj.getPatientUsername());
+            row[1] = userInfo.searchOrgNameInDb(obj.getPatientUsername());
             row[2] = obj.getBp();
             row[3] = obj.getTemp();
             row[4] = obj.getPulse();

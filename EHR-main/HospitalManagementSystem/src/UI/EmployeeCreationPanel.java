@@ -11,13 +11,13 @@ public class EmployeeCreationPanel extends javax.swing.JPanel {
     /**
      * Creates new form EmployeeCreationPanel
      */
-    UserInfo userData;
+    UserInfo userInfo;
     String username;
     
-    public EmployeeCreationPanel(String username, UserInfo userData) {
+    public EmployeeCreationPanel(String username, UserInfo userInfo) {
         initComponents();
         this.username = username;
-        this.userData = userData;
+        this.userInfo = userInfo;
     }
 
     /**
@@ -313,9 +313,9 @@ public class EmployeeCreationPanel extends javax.swing.JPanel {
         us.setName(fName + " " + lName);
         us.setRole(role);
         us.setOrg("Insurance");
-        us.setOrgName(userData.searchOrgNameInDb(username));
+        us.setOrgName(userInfo.searchOrgNameInDb(username));
         
-        userData.createUserInDb(us);
+        userInfo.createUserInDb(us);
         
         JOptionPane.showMessageDialog(this, "Created Successfully.");
         

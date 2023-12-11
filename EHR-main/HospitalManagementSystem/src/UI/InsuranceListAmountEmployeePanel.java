@@ -20,15 +20,13 @@ public class InsuranceListAmountEmployeePanel extends javax.swing.JPanel {
      * Creates new form InsuranceListAmountEmployeePanel
      */
     String username;
-    InsuranceClaimsInfo icD;
-    Color MouseAcceptEnterColor = new Color(51,102,0);
-    Color MouseExitColor = new Color(255,255,255);
-    Color MouseRejectEnterColor = new Color(255,102,102);
-    public InsuranceListAmountEmployeePanel(String username, InsuranceClaimsInfo icD) {
+    InsuranceClaimsInfo insurClaims;
+   
+    public InsuranceListAmountEmployeePanel(String username, InsuranceClaimsInfo insurClaims) {
         initComponents();
         this.username = username;
-        this.icD = icD;
-        populateTable();
+        this.insurClaims = insurClaims;
+        loadData();
     }
 
     /**
@@ -202,42 +200,34 @@ public class InsuranceListAmountEmployeePanel extends javax.swing.JPanel {
 
     private void jPanel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseEntered
         // TODO add your handling code here:
-        jPanel2.setBackground(MouseAcceptEnterColor);
     }//GEN-LAST:event_jPanel2MouseEntered
 
     private void jPanel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseExited
         // TODO add your handling code here:
-        jPanel2.setBackground(MouseExitColor);
     }//GEN-LAST:event_jPanel2MouseExited
 
     private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
         // TODO add your handling code here:
-        jLabel2.setBackground(MouseAcceptEnterColor);
     }//GEN-LAST:event_jLabel2MouseEntered
 
     private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
         // TODO add your handling code here:
-        jLabel2.setBackground(MouseExitColor);
     }//GEN-LAST:event_jLabel2MouseExited
 
     private void jPanel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseEntered
         // TODO add your handling code here:
-        jPanel3.setBackground(MouseRejectEnterColor);
     }//GEN-LAST:event_jPanel3MouseEntered
 
     private void jPanel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseExited
         // TODO add your handling code here:
-        jPanel3.setBackground(MouseExitColor);
     }//GEN-LAST:event_jPanel3MouseExited
 
     private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
         // TODO add your handling code here:
-        jLabel1.setBackground(MouseRejectEnterColor);
     }//GEN-LAST:event_jLabel1MouseEntered
 
     private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
         // TODO add your handling code here:
-        jLabel1.setBackground(MouseExitColor);
     }//GEN-LAST:event_jLabel1MouseExited
 
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
@@ -262,7 +252,7 @@ public class InsuranceListAmountEmployeePanel extends javax.swing.JPanel {
             String qry2 = "update patientpurchasehistory set status = 'paid' where id = '"+ic.getPid()+"'";
             stmt.executeUpdate(qry2);
             JOptionPane.showMessageDialog(this, "Insurance Approved");
-            populateTable();
+            loadData();
              
         } catch (SQLException ex) {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
@@ -291,7 +281,7 @@ public class InsuranceListAmountEmployeePanel extends javax.swing.JPanel {
             //String qry2 = "update patientpurchasehistory set status = 'pay with cash' where id = '"+ic+"'";
             //stmt.executeUpdate(qry2);
             JOptionPane.showMessageDialog(this, "Insurance Claim Declined");
-            populateTable();
+            loadData();
              
         } catch (SQLException ex) {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
@@ -300,10 +290,10 @@ public class InsuranceListAmountEmployeePanel extends javax.swing.JPanel {
     }//GEN-LAST:event_jLabel1MouseClicked
 
 
-    private void populateTable() {
+    private void loadData() {
             DefaultTableModel model= (DefaultTableModel) InsuranceTable.getModel();
             model.setRowCount(0);
-            for(InsuranceClaims obj : icD.getPlacedInsuranceReqInfoFromDb()){
+            for(InsuranceClaims obj : insurClaims.getPlacedInsuranceReqInfoFromDb()){
                 Object[] row= new Object[3];
                 row[0] = obj;
                 row[1] = obj.getId();

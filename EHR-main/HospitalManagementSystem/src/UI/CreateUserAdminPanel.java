@@ -26,10 +26,10 @@ public class CreateUserAdminPanel extends javax.swing.JPanel {
     /**
      * Creates new form CreateUserAdminPanel
      */
-    UserInfo userData;
-    public CreateUserAdminPanel(UserInfo userData) {
+    UserInfo userInfo;
+    public CreateUserAdminPanel(UserInfo userInfo) {
         initComponents();
-        this.userData = userData;
+        this.userInfo = userInfo;
             jLabel15.setVisible(false);
             jComboBox1.setVisible(false);
     }
@@ -404,14 +404,14 @@ public class CreateUserAdminPanel extends javax.swing.JPanel {
             if(!matcher.matches()){
                 throw new InputMismatchException("Invalid Email");   
             }
-            User p = userData.addNewUser();
+            User p = userInfo.addNewUser();
             p.setName(name);
             p.setUsername(username);
             p.setRole(role);
             p.setOrg(org);
             p.setPassword(password);
             p.setOrgName(orgName);
-            boolean res = userData.createUserInDb(p);
+            boolean res = userInfo.createUserInDb(p);
             if(!res){
                 JOptionPane.showMessageDialog(this,"retry" , "warning", HEIGHT);
             }
@@ -534,90 +534,7 @@ public class CreateUserAdminPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_OrgComboBoxActionPerformed
 
     private void RoleComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RoleComboBoxActionPerformed
-        // TODO add your handling code here:
- 
-        
-        
-        
-        
-        
        
-
-
-
-                
-//        String[] roleArray = null;
-//        JOptionPane.showMessageDialog(this,"hi");                  
-//                        
-//                //patient, doctor, hospitalAdmin, insuranceAdmin, insuranceEmp, insuranceFinance, pharmacyAdmin, supplier, sysAdmin
-//                //String[]
-//        String org_ = OrgComboBox.getSelectedItem().toString();
-//        JOptionPane.showMessageDialog(this,org_);
-//        if (org_!= null){
-//            String[] patient ={"Patient"};
-//            String[] hospital ={"Doctor", "HospitalAdmin"};
-//            String[] system ={"SystemAdmin"};
-//            String[] insurance ={"InsuranceAdmin","InsuranceEmployee","InsuranceFinance"};
-//            String[] supplier ={"Supplier"};
-//            String[] pharmacy ={"PharmacyAdmin"};
-//                    //ArrayList<community> commData= communityData.SearchCommunity(jComboBox2.getSelectedItem().toString(), "community");
-//            switch (org_){
-//                case "Patient":
-//                    roleArray = new String[patient.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = patient[i];
-//                        JOptionPane.showMessageDialog(this,roleArray[i]);
-//                    }
-//                    break;
-//                case "System":
-//                    
-//                    roleArray = new String[system.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = system[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    break;
-//                case "Hospital":
-//                    roleArray = new String[hospital.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = hospital[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    
-//                    break;
-//                case "Pharmacy":
-//                    roleArray = new String[pharmacy.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = pharmacy[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    break;
-//                case "Supplier":
-//                    roleArray = new String[supplier.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = supplier[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    break;
-//                case "Insurance":
-//                    roleArray = new String[insurance.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = insurance[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    break;    
-//        }
-//            //roleArray = new String[9];
-//            //JOptionPane.showMessageDialog(this,doctorData.size());
-////            for(int i = 0; i < roleArray.length; i++) {
-////                roleArray[i] = commData.get(i).getHospital().toString();
-////                //JOptionPane.showMessageDialog(this,array[i]);
-////            }
-//           
-//        }
-//        if(roleArray.length>0){
-//            RoleComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(roleArray));
-//        }
     }//GEN-LAST:event_RoleComboBoxActionPerformed
 
     private void RoleComboBoxMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RoleComboBoxMouseClicked
@@ -692,78 +609,8 @@ public class CreateUserAdminPanel extends javax.swing.JPanel {
                 //JOptionPane.showMessageDialog(this,"hii");
                 break;
         }
-//        String[] roleArray = null;
-//        //JOptionPane.showMessageDialog(this,"hi");                  
-//                        
-//                //patient, doctor, hospitalAdmin, insuranceAdmin, insuranceEmp, insuranceFinance, pharmacyAdmin, supplier, sysAdmin
-//                //String[]
-//        String org_ = OrgComboBox.getSelectedItem().toString();
-//        //JOptionPane.showMessageDialog(this,org_);
-//        if (org_!= null){
-//            String[] patient ={"Patient"};
-//            String[] hospital ={"Doctor", "HospitalAdmin"};
-//            String[] system ={"SystemAdmin"};
-//            String[] insurance ={"InsuranceAdmin","InsuranceEmployee","InsuranceFinance"};
-//            String[] supplier ={"Supplier"};
-//            String[] pharmacy ={"PharmacyAdmin"};
-//                    //ArrayList<community> commData= communityData.SearchCommunity(jComboBox2.getSelectedItem().toString(), "community");
-//            switch (org_){
-//                case "Patient":
-//                    roleArray = new String[patient.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = patient[i];
-//                        //JOptionPane.showMessageDialog(this,roleArray[i]);
-//                    }
-//                    break;
-//                case "System":
-//                    
-//                    roleArray = new String[system.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = system[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    break;
-//                case "Hospital":
-//                    roleArray = new String[hospital.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = hospital[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    
-//                    break;
-//                case "Pharmacy":
-//                    roleArray = new String[pharmacy.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = pharmacy[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    break;
-//                case "Supplier":
-//                    roleArray = new String[supplier.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = supplier[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    break;
-//                case "Insurance":
-//                    roleArray = new String[insurance.length];
-//                    for(int i = 0; i < roleArray.length; i++) {
-//                        roleArray[i] = insurance[i];
-//                        //JOptionPane.showMessageDialog(this,array[i]);
-//                    }
-//                    break;    
-//        }
-//            //roleArray = new String[9];
-//            //JOptionPane.showMessageDialog(this,doctorData.size());
-////            for(int i = 0; i < roleArray.length; i++) {
-////                roleArray[i] = commData.get(i).getHospital().toString();
-////                //JOptionPane.showMessageDialog(this,array[i]);
-////            }
-//           
-//        }
-//        if(roleArray.length>0){
-//            RoleComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(roleArray));
-//        }
+
+      
     }//GEN-LAST:event_RoleComboBoxMouseClicked
 
     private void txtUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtUsernameActionPerformed
