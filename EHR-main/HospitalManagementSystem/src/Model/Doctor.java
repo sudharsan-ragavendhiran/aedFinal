@@ -3,7 +3,7 @@ package Model;
 
 
 public class Doctor {
-    String username, name, dob, gender, email, phoneNumber, hospitalId, hospitalName, specialisation;
+    String username, doctorName, dob, gender, email, phoneNumber, hospitalId, hospitalName, specialisation;
 
     public String getHospitalId() {
         return hospitalId;
@@ -30,11 +30,11 @@ public class Doctor {
     }
 
     public String getName() {
-        return name;
+        return doctorName;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.doctorName = name;
     }
 
     public String getDob() {
@@ -78,6 +78,6 @@ public class Doctor {
     }
          @Override
     public String toString(){
-        return name;
+        return doctorName;
     }
 }

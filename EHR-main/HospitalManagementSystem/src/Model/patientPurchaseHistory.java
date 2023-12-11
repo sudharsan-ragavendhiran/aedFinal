@@ -11,19 +11,19 @@ import java.util.ArrayList;
 
 
 public class patientPurchaseHistory {
-    private ArrayList<patientPurchase> purchaseData;
+    private ArrayList<patientPurchase> purchaseInfo;
     
     public patientPurchaseHistory() {
-        this.purchaseData = new ArrayList<patientPurchase>();
+        this.purchaseInfo = new ArrayList<patientPurchase>();
     }
     
     public patientPurchase addNewPurchase(){
         patientPurchase newEncounter = new patientPurchase();
-        purchaseData.add(newEncounter);
+        purchaseInfo.add(newEncounter);
         return newEncounter;
     }
     
-    public ArrayList<patientPurchase> getPatientPurchaseFromDb() {
+    public ArrayList<patientPurchase> getPatientBuyFromDb() {
         ArrayList<patientPurchase> purchaseData1 = new ArrayList();
         try {
             Connection con=SQLConnection.dbconnector();
