@@ -40,7 +40,7 @@ public class ViewAppointmentsDoctor extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         AppointmentTable = new javax.swing.JTable();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 0, 0));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
         AppointmentTable.setModel(new javax.swing.table.DefaultTableModel(

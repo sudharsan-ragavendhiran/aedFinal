@@ -49,6 +49,7 @@ public class PharmacyViewOrders extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setForeground(new java.awt.Color(255, 0, 0));
 
         PharmacyOrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -74,8 +75,8 @@ public class PharmacyViewOrders extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel1.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("SUPPLY");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
@@ -114,8 +115,8 @@ public class PharmacyViewOrders extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel2.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("OUT OF STOCK");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
