@@ -18,8 +18,7 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
     HospitalInfo hosData;
     pharmacyInfo pharmData;
     SupplierInfo suppData;
-    Color MouseEnterColor = new Color(255,102,102);
-    Color MouseExitColor = new Color(153,204,255);
+    
     public SupplierManagementPanel(UserInfo userData, HospitalInfo hosData, pharmacyInfo pharmData, SupplierInfo suppData) {
         initComponents();
         this.userData = userData;
@@ -48,9 +47,9 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
         jSplitPane1 = new javax.swing.JSplitPane();
         jPanel5 = new javax.swing.JPanel();
         CreateUserJPanel = new javax.swing.JPanel();
-        lblUserCreate = new javax.swing.JLabel();
+        Create = new javax.swing.JLabel();
         ViewUserJPanel = new javax.swing.JPanel();
-        UserViewlbl = new javax.swing.JLabel();
+        View = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
@@ -142,19 +141,19 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
             }
         });
 
-        lblUserCreate.setBackground(new java.awt.Color(255, 255, 255));
-        lblUserCreate.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
-        lblUserCreate.setForeground(new java.awt.Color(255, 255, 255));
-        lblUserCreate.setText("REGISTER SUPPLIER");
-        lblUserCreate.addMouseListener(new java.awt.event.MouseAdapter() {
+        Create.setBackground(new java.awt.Color(255, 255, 255));
+        Create.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        Create.setForeground(new java.awt.Color(255, 255, 255));
+        Create.setText("REGISTER SUPPLIER");
+        Create.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lblUserCreateMouseClicked(evt);
+                CreateMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                lblUserCreateMouseEntered(evt);
+                CreateMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                lblUserCreateMouseExited(evt);
+                CreateMouseExited(evt);
             }
         });
 
@@ -164,14 +163,14 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
             CreateUserJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CreateUserJPanelLayout.createSequentialGroup()
                 .addGap(79, 79, 79)
-                .addComponent(lblUserCreate)
+                .addComponent(Create)
                 .addContainerGap(45, Short.MAX_VALUE))
         );
         CreateUserJPanelLayout.setVerticalGroup(
             CreateUserJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(CreateUserJPanelLayout.createSequentialGroup()
                 .addGap(19, 19, 19)
-                .addComponent(lblUserCreate)
+                .addComponent(Create)
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -188,18 +187,18 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
             }
         });
 
-        UserViewlbl.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
-        UserViewlbl.setForeground(new java.awt.Color(255, 255, 255));
-        UserViewlbl.setText("VIEW SUPPLIER");
-        UserViewlbl.addMouseListener(new java.awt.event.MouseAdapter() {
+        View.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        View.setForeground(new java.awt.Color(255, 255, 255));
+        View.setText("VIEW SUPPLIER");
+        View.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                UserViewlblMouseClicked(evt);
+                ViewMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                UserViewlblMouseEntered(evt);
+                ViewMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                UserViewlblMouseExited(evt);
+                ViewMouseExited(evt);
             }
         });
 
@@ -209,19 +208,19 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
             ViewUserJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ViewUserJPanelLayout.createSequentialGroup()
                 .addGap(91, 91, 91)
-                .addComponent(UserViewlbl)
+                .addComponent(View)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ViewUserJPanelLayout.setVerticalGroup(
             ViewUserJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ViewUserJPanelLayout.createSequentialGroup()
                 .addGap(16, 16, 16)
-                .addComponent(UserViewlbl)
+                .addComponent(View)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        jLabel8.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel8.setFont(new java.awt.Font("Papyrus", 1, 12)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/back-icon.png"))); // NOI18N
         jLabel8.setText("GO BACK");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -291,21 +290,21 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void lblUserCreateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserCreateMouseClicked
+    private void CreateMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMouseClicked
         // TODO add your handling code here:
         SupplierRegistrationPanel rs = new SupplierRegistrationPanel();
         jSplitPane1.setRightComponent(rs);
-    }//GEN-LAST:event_lblUserCreateMouseClicked
+    }//GEN-LAST:event_CreateMouseClicked
 
-    private void lblUserCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserCreateMouseEntered
+    private void CreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMouseEntered
         // TODO add your handling code here:
-        lblUserCreate.setBackground(MouseEnterColor);
-    }//GEN-LAST:event_lblUserCreateMouseEntered
+        
+    }//GEN-LAST:event_CreateMouseEntered
 
-    private void lblUserCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserCreateMouseExited
+    private void CreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateMouseExited
         // TODO add your handling code here:
-        lblUserCreate.setBackground(MouseExitColor);
-    }//GEN-LAST:event_lblUserCreateMouseExited
+      
+    }//GEN-LAST:event_CreateMouseExited
 
     private void CreateUserJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseClicked
         // TODO add your handling code here:
@@ -315,29 +314,29 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
 
     private void CreateUserJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseEntered
         // TODO add your handling code here:
-        CreateUserJPanel.setBackground(MouseEnterColor);
+       
     }//GEN-LAST:event_CreateUserJPanelMouseEntered
 
     private void CreateUserJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseExited
         // TODO add your handling code here:
-        CreateUserJPanel.setBackground(MouseExitColor);
+        
     }//GEN-LAST:event_CreateUserJPanelMouseExited
 
-    private void UserViewlblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserViewlblMouseClicked
+    private void ViewMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewMouseClicked
         // TODO add your handling code here:
         SupplierDetailsAdminPanel vsa = new SupplierDetailsAdminPanel(suppData);
         jSplitPane1.setRightComponent(vsa);
-    }//GEN-LAST:event_UserViewlblMouseClicked
+    }//GEN-LAST:event_ViewMouseClicked
 
-    private void UserViewlblMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserViewlblMouseEntered
+    private void ViewMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewMouseEntered
         // TODO add your handling code here:
-        UserViewlbl.setBackground(MouseEnterColor);
-    }//GEN-LAST:event_UserViewlblMouseEntered
+        
+    }//GEN-LAST:event_ViewMouseEntered
 
-    private void UserViewlblMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserViewlblMouseExited
+    private void ViewMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewMouseExited
         // TODO add your handling code here:
-        UserViewlbl.setBackground(MouseExitColor);
-    }//GEN-LAST:event_UserViewlblMouseExited
+        
+    }//GEN-LAST:event_ViewMouseExited
 
     private void ViewUserJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewUserJPanelMouseClicked
         // TODO add your handling code here:
@@ -347,12 +346,12 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
 
     private void ViewUserJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewUserJPanelMouseEntered
         // TODO add your handling code here:
-        ViewUserJPanel.setBackground(MouseEnterColor);
+        
     }//GEN-LAST:event_ViewUserJPanelMouseEntered
 
     private void ViewUserJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewUserJPanelMouseExited
         // TODO add your handling code here:
-        ViewUserJPanel.setBackground(MouseExitColor);
+        
     }//GEN-LAST:event_ViewUserJPanelMouseExited
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
@@ -366,8 +365,9 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Create;
     private javax.swing.JPanel CreateUserJPanel;
-    private javax.swing.JLabel UserViewlbl;
+    private javax.swing.JLabel View;
     private javax.swing.JPanel ViewUserJPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -382,6 +382,5 @@ public class SupplierManagementPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JSplitPane jSplitPane1;
-    private javax.swing.JLabel lblUserCreate;
     // End of variables declaration//GEN-END:variables
 }

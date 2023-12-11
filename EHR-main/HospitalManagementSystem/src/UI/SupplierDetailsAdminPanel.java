@@ -49,20 +49,20 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
         SupplierTable = new javax.swing.JTable();
         jPanel5 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
-        txtHName = new javax.swing.JTextField();
+        Name = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
-        txtAreaCode = new javax.swing.JTextField();
+        AreaCode = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
-        txtAddress = new javax.swing.JTextField();
+        Address = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        txtID = new javax.swing.JTextField();
+        ID = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        txtCity = new javax.swing.JTextField();
-        txtState = new javax.swing.JTextField();
+        City = new javax.swing.JTextField();
+        State = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        btnUpdate = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
-        btnView = new javax.swing.JButton();
+        nUpdate = new javax.swing.JButton();
+        Delete = new javax.swing.JButton();
+        View = new javax.swing.JButton();
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
@@ -101,11 +101,11 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(68, 68, 68)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 247, Short.MAX_VALUE)
+                .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 287, Short.MAX_VALUE)
                 .addComponent(btnSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnRefresh, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -151,9 +151,9 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
         jLabel16.setForeground(new java.awt.Color(255, 0, 0));
         jLabel16.setText("STATE :");
 
-        txtHName.addActionListener(new java.awt.event.ActionListener() {
+        Name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHNameActionPerformed(evt);
+                NameActionPerformed(evt);
             }
         });
 
@@ -177,21 +177,21 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
         jLabel15.setForeground(new java.awt.Color(255, 0, 0));
         jLabel15.setText("AREA CODE :");
 
-        btnUpdate.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
-        btnUpdate.setForeground(new java.awt.Color(255, 0, 0));
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        nUpdate.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        nUpdate.setForeground(new java.awt.Color(255, 0, 0));
+        nUpdate.setText("Update");
+        nUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                nUpdateActionPerformed(evt);
             }
         });
 
-        btnDelete.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
-        btnDelete.setForeground(new java.awt.Color(255, 0, 0));
-        btnDelete.setText("Delete");
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        Delete.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        Delete.setForeground(new java.awt.Color(255, 0, 0));
+        Delete.setText("Delete");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                DeleteActionPerformed(evt);
             }
         });
 
@@ -205,75 +205,75 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel15)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                        .addComponent(txtAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(AreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Address, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtHName, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(City, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel16)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(State, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(120, 120, 120))
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(270, 270, 270)
-                .addComponent(btnUpdate)
+                .addComponent(nUpdate)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnDelete)
+                .addComponent(Delete)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap(117, Short.MAX_VALUE)
+                .addContainerGap(130, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(txtHName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
-                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(City, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
-                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(State, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
-                    .addComponent(txtAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(41, 41, 41)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnDelete))
+                    .addComponent(nUpdate)
+                    .addComponent(Delete))
                 .addGap(78, 78, 78))
         );
 
-        btnView.setFont(new java.awt.Font("Papyrus", 0, 18)); // NOI18N
-        btnView.setForeground(new java.awt.Color(255, 0, 0));
-        btnView.setText("View");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        View.setFont(new java.awt.Font("Papyrus", 0, 18)); // NOI18N
+        View.setForeground(new java.awt.Color(255, 0, 0));
+        View.setText("View");
+        View.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                ViewActionPerformed(evt);
             }
         });
 
@@ -282,14 +282,14 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(166, 166, 166)
-                        .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(View, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(169, 169, 169)))
                 .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
@@ -300,10 +300,10 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(237, 237, 237)
-                        .addComponent(btnView)
-                        .addGap(0, 61, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 369, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(48, 48, 48)
+                        .addComponent(View)
+                        .addGap(0, 62, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -382,7 +382,7 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
 
     }
     
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         // TODO add your handling code here:
         int selectedRowIndex= SupplierTable.getSelectedRow();
         if (selectedRowIndex<0){
@@ -394,32 +394,32 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(this, "Selected row deleted");
         populateTable();
         
-        txtHName.setText("");
-        txtID.setText("");
-        txtAddress.setText("");
-        txtCity.setText("");
-        txtState.setText("");
-        txtAreaCode.setText("");
-    }//GEN-LAST:event_btnDeleteActionPerformed
+        Name.setText("");
+        ID.setText("");
+        Address.setText("");
+        City.setText("");
+        State.setText("");
+        AreaCode.setText("");
+    }//GEN-LAST:event_DeleteActionPerformed
 
-    private void txtHNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHNameActionPerformed
+    private void NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtHNameActionPerformed
+    }//GEN-LAST:event_NameActionPerformed
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         txtSearchUser.setText("");
         populateTable();
         
-        txtHName.setText("");
-        txtID.setText("");
-        txtAddress.setText("");
-        txtCity.setText("");
-        txtState.setText("");
-        txtAreaCode.setText("");
+        Name.setText("");
+        ID.setText("");
+        Address.setText("");
+        City.setText("");
+        State.setText("");
+        AreaCode.setText("");
     }//GEN-LAST:event_btnRefreshActionPerformed
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void ViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewActionPerformed
         // TODO add your handling code here:
         int selectedRowIndex= SupplierTable.getSelectedRow();
         
@@ -430,13 +430,13 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) SupplierTable.getModel();
         Supplier supp= (Supplier) model.getValueAt(selectedRowIndex,0);
         
-        txtHName.setText(supp.getName());
-        txtID.setText(supp.getId());
-        txtAddress.setText(supp.getAddress());
-        txtCity.setText(supp.getCity());
-        txtState.setText(supp.getState());
-        txtAreaCode.setText(supp.getAreacode());
-    }//GEN-LAST:event_btnViewActionPerformed
+        Name.setText(supp.getName());
+        ID.setText(supp.getId());
+        Address.setText(supp.getAddress());
+        City.setText(supp.getCity());
+        State.setText(supp.getState());
+        AreaCode.setText(supp.getAreacode());
+    }//GEN-LAST:event_ViewActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
@@ -479,14 +479,14 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnSearchActionPerformed
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void nUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nUpdateActionPerformed
         // TODO add your handling code here:
-        String newName = txtHName.getText();
-        String newCity = txtCity.getText();
-        String newAddress = txtAddress.getText();
-        String newState = txtState.getText();
-        String newAreacode = txtAreaCode.getText();
-        String newId = txtID.getText();
+        String newName = Name.getText();
+        String newCity = City.getText();
+        String newAddress = Address.getText();
+        String newState = State.getText();
+        String newAreacode = AreaCode.getText();
+        String newId = ID.getText();
         
         try {
             Connection con=SQLConnection.dbconnector();
@@ -502,22 +502,27 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
             System.out.print(ex.getMessage());
         }
         
-        txtHName.setText("");
-        txtID.setText("");
-        txtAddress.setText("");
-        txtCity.setText("");
-        txtState.setText("");
-        txtAreaCode.setText("");
-    }//GEN-LAST:event_btnUpdateActionPerformed
+        Name.setText("");
+        ID.setText("");
+        Address.setText("");
+        City.setText("");
+        State.setText("");
+        AreaCode.setText("");
+    }//GEN-LAST:event_nUpdateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Address;
+    private javax.swing.JTextField AreaCode;
+    private javax.swing.JTextField City;
+    private javax.swing.JButton Delete;
+    private javax.swing.JTextField ID;
+    private javax.swing.JTextField Name;
+    private javax.swing.JTextField State;
     private javax.swing.JTable SupplierTable;
-    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton View;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnSearch;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JButton btnView;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel15;
@@ -531,12 +536,7 @@ public class SupplierDetailsAdminPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtAreaCode;
-    private javax.swing.JTextField txtCity;
-    private javax.swing.JTextField txtHName;
-    private javax.swing.JTextField txtID;
+    private javax.swing.JButton nUpdate;
     private javax.swing.JTextField txtSearchUser;
-    private javax.swing.JTextField txtState;
     // End of variables declaration//GEN-END:variables
 }

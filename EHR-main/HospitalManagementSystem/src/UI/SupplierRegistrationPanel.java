@@ -33,12 +33,12 @@ public class SupplierRegistrationPanel extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txtHName = new javax.swing.JTextField();
-        txtID = new javax.swing.JTextField();
-        txtAddress = new javax.swing.JTextField();
-        txtCity = new javax.swing.JTextField();
-        txtState = new javax.swing.JTextField();
-        txtAreaCode = new javax.swing.JTextField();
+        Name = new javax.swing.JTextField();
+        ID = new javax.swing.JTextField();
+        Address = new javax.swing.JTextField();
+        City = new javax.swing.JTextField();
+        State = new javax.swing.JTextField();
+        AreaCode = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 0, 0));
@@ -84,7 +84,7 @@ public class SupplierRegistrationPanel extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("AREA CODE :");
+        jLabel5.setText("PIN CODE");
 
         jLabel6.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
@@ -94,39 +94,39 @@ public class SupplierRegistrationPanel extends javax.swing.JPanel {
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
         jLabel7.setText("CITY :");
 
-        txtHName.addActionListener(new java.awt.event.ActionListener() {
+        Name.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtHNameActionPerformed(evt);
+                NameActionPerformed(evt);
             }
         });
 
-        txtID.addActionListener(new java.awt.event.ActionListener() {
+        ID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtIDActionPerformed(evt);
+                IDActionPerformed(evt);
             }
         });
 
-        txtAddress.addActionListener(new java.awt.event.ActionListener() {
+        Address.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAddressActionPerformed(evt);
+                AddressActionPerformed(evt);
             }
         });
 
-        txtCity.addActionListener(new java.awt.event.ActionListener() {
+        City.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtCityActionPerformed(evt);
+                CityActionPerformed(evt);
             }
         });
 
-        txtState.addActionListener(new java.awt.event.ActionListener() {
+        State.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtStateActionPerformed(evt);
+                StateActionPerformed(evt);
             }
         });
 
-        txtAreaCode.addActionListener(new java.awt.event.ActionListener() {
+        AreaCode.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtAreaCodeActionPerformed(evt);
+                AreaCodeActionPerformed(evt);
             }
         });
 
@@ -161,12 +161,12 @@ public class SupplierRegistrationPanel extends javax.swing.JPanel {
                                     .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.LEADING))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtHName, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Address, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(City, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(State, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(AreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jButton1))))
                 .addContainerGap(144, Short.MAX_VALUE))
         );
@@ -177,27 +177,27 @@ public class SupplierRegistrationPanel extends javax.swing.JPanel {
                 .addGap(55, 55, 55)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtHName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(ID, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtAddress, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Address, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtCity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(City, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(txtState, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(State, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtAreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(AreaCode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
                 .addComponent(jButton1)
                 .addGap(32, 32, 32))
@@ -221,38 +221,38 @@ public class SupplierRegistrationPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtHNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHNameActionPerformed
+    private void NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NameActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtHNameActionPerformed
+    }//GEN-LAST:event_NameActionPerformed
 
-    private void txtIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtIDActionPerformed
+    private void IDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IDActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtIDActionPerformed
+    }//GEN-LAST:event_IDActionPerformed
 
-    private void txtAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddressActionPerformed
+    private void AddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AddressActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAddressActionPerformed
+    }//GEN-LAST:event_AddressActionPerformed
 
-    private void txtCityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCityActionPerformed
+    private void CityActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CityActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtCityActionPerformed
+    }//GEN-LAST:event_CityActionPerformed
 
-    private void txtStateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtStateActionPerformed
+    private void StateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_StateActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtStateActionPerformed
+    }//GEN-LAST:event_StateActionPerformed
 
-    private void txtAreaCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAreaCodeActionPerformed
+    private void AreaCodeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AreaCodeActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtAreaCodeActionPerformed
+    }//GEN-LAST:event_AreaCodeActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        String supplierName = txtHName.getText();
-        String supplierId = txtID.getText();
-        String supplierAddress = txtAddress.getText();
-        String supplierCity = txtCity.getText();
-        String supplierState = txtState.getText();
-        String supplierAreaCode = txtAreaCode.getText();
+        String supplierName = Name.getText();
+        String supplierId = ID.getText();
+        String supplierAddress = Address.getText();
+        String supplierCity = City.getText();
+        String supplierState = State.getText();
+        String supplierAreaCode = AreaCode.getText();
         
         if(supplierName.equals("") || supplierId.equals("") || supplierAddress.equals("") || supplierCity.equals("") || supplierState.equals("") || supplierAreaCode.equals("")){
             JOptionPane.showMessageDialog(this, "Please enter details in all the fields.");
@@ -269,16 +269,22 @@ public class SupplierRegistrationPanel extends javax.swing.JPanel {
         
         JOptionPane.showMessageDialog(this, "Created Successfully.");
         
-        txtHName.setText("");
-        txtID.setText("");
-        txtAddress.setText("");
-        txtCity.setText("");
-        txtState.setText("");
-        txtAreaCode.setText(""); 
+        Name.setText("");
+        ID.setText("");
+        Address.setText("");
+        City.setText("");
+        State.setText("");
+        AreaCode.setText(""); 
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Address;
+    private javax.swing.JTextField AreaCode;
+    private javax.swing.JTextField City;
+    private javax.swing.JTextField ID;
+    private javax.swing.JTextField Name;
+    private javax.swing.JTextField State;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -289,11 +295,5 @@ public class SupplierRegistrationPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JTextField txtAddress;
-    private javax.swing.JTextField txtAreaCode;
-    private javax.swing.JTextField txtCity;
-    private javax.swing.JTextField txtHName;
-    private javax.swing.JTextField txtID;
-    private javax.swing.JTextField txtState;
     // End of variables declaration//GEN-END:variables
 }

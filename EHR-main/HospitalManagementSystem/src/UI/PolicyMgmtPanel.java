@@ -49,15 +49,15 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         PolicyTable = new javax.swing.JTable();
-        btnView = new javax.swing.JButton();
-        txtPName = new javax.swing.JTextField();
+        View = new javax.swing.JButton();
+        Name = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        txtPId = new javax.swing.JTextField();
-        txtIn = new javax.swing.JTextField();
-        btnUpdate = new javax.swing.JButton();
-        btnDelete = new javax.swing.JButton();
+        PId = new javax.swing.JTextField();
+        In = new javax.swing.JTextField();
+        Update = new javax.swing.JButton();
+        Delete = new javax.swing.JButton();
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
@@ -138,14 +138,14 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(PolicyTable);
 
-        btnView.setText("View Policy Details");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        View.setText("View Policy Details");
+        View.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                ViewActionPerformed(evt);
             }
         });
 
-        txtPName.setEditable(false);
+        Name.setEditable(false);
 
         jLabel4.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
@@ -159,19 +159,19 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("POLICY ID :");
 
-        txtIn.setEditable(false);
+        In.setEditable(false);
 
-        btnUpdate.setText("Update");
-        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+        Update.setText("Update");
+        Update.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUpdateActionPerformed(evt);
+                UpdateActionPerformed(evt);
             }
         });
 
-        btnDelete.setText("Delete");
-        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+        Delete.setText("Delete");
+        Delete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeleteActionPerformed(evt);
+                DeleteActionPerformed(evt);
             }
         });
 
@@ -179,8 +179,11 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(86, Short.MAX_VALUE)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap(91, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel5)
@@ -188,21 +191,15 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
                     .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txtPName, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtPId, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtIn, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(View)
+                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(PId, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(In, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(btnUpdate)
+                        .addComponent(Update)
                         .addGap(50, 50, 50)
-                        .addComponent(btnDelete)))
-                .addContainerGap(691, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
-                .addComponent(btnView)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(Delete)))
+                .addContainerGap(696, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -212,21 +209,22 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
                 .addGap(65, 65, 65)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(txtPName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtIn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(In, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
-                    .addComponent(txtPId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(PId, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(45, 45, 45)
+                .addComponent(View)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnView)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnDelete))
-                .addContainerGap(164, Short.MAX_VALUE))
+                    .addComponent(Update)
+                    .addComponent(Delete))
+                .addContainerGap(114, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -291,7 +289,7 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSearchUserActionPerformed
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void ViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ViewActionPerformed
         // TODO add your handling code here:
         int selectedRowIndex= PolicyTable.getSelectedRow();
         
@@ -302,26 +300,26 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) PolicyTable.getModel();
         InsurancePolicy ip= (InsurancePolicy) model.getValueAt(selectedRowIndex,0);
         
-        txtPName.setText(ip.getPatientUsername());
-        txtIn.setText(ip.getInsuranceAgencyId());
-        txtPId.setText(String.valueOf(ip.getId()));
-    }//GEN-LAST:event_btnViewActionPerformed
+        Name.setText(ip.getPatientUsername());
+        In.setText(ip.getInsuranceAgencyId());
+        PId.setText(String.valueOf(ip.getId()));
+    }//GEN-LAST:event_ViewActionPerformed
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         txtSearchUser.setText("");
         populateTable();
         
-        txtPName.setText("");
-        txtIn.setText("");
-        txtPId.setText("");
+        Name.setText("");
+        In.setText("");
+        PId.setText("");
     }//GEN-LAST:event_btnRefreshActionPerformed
 
-    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+    private void UpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UpdateActionPerformed
         // TODO add your handling code here:
-        String newP = txtPName.getText();
-        String newIn = txtIn.getText();
-        int newPid = Integer.parseInt(txtPId.getText());
+        String newP = Name.getText();
+        String newIn = In.getText();
+        int newPid = Integer.parseInt(PId.getText());
         
         try {
             Connection con=SQLConnection.dbconnector();
@@ -337,12 +335,12 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
             System.out.print(ex.getMessage());
         }
         
-        txtPName.setText("");
-        txtIn.setText("");
-        txtPId.setText("");
-    }//GEN-LAST:event_btnUpdateActionPerformed
+        Name.setText("");
+        In.setText("");
+        PId.setText("");
+    }//GEN-LAST:event_UpdateActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+    private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         // TODO add your handling code here:
         int selectedRowIndex= PolicyTable.getSelectedRow();
         if (selectedRowIndex<0){
@@ -354,10 +352,10 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(this, "Selected row deleted");
         populateTable();
         
-        txtPName.setText("");
-        txtIn.setText("");
-        txtPId.setText("");
-    }//GEN-LAST:event_btnDeleteActionPerformed
+        Name.setText("");
+        In.setText("");
+        PId.setText("");
+    }//GEN-LAST:event_DeleteActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
@@ -413,12 +411,15 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Delete;
+    private javax.swing.JTextField In;
+    private javax.swing.JTextField Name;
+    private javax.swing.JTextField PId;
     private javax.swing.JTable PolicyTable;
-    private javax.swing.JButton btnDelete;
+    private javax.swing.JButton Update;
+    private javax.swing.JButton View;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnSearch;
-    private javax.swing.JButton btnUpdate;
-    private javax.swing.JButton btnView;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -428,9 +429,6 @@ public class PolicyMgmtPanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtIn;
-    private javax.swing.JTextField txtPId;
-    private javax.swing.JTextField txtPName;
     private javax.swing.JTextField txtSearchUser;
     // End of variables declaration//GEN-END:variables
 }

@@ -46,7 +46,7 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         txtSearchUser = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
-        btnView = new javax.swing.JButton();
+        btnV = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         OrderTable = new javax.swing.JTable();
         jPanel3 = new javax.swing.JPanel();
@@ -54,10 +54,10 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        txtPName = new javax.swing.JTextField();
-        txtItemName = new javax.swing.JTextField();
-        txtItemQuantity = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
+        Name = new javax.swing.JTextField();
+        Item = new javax.swing.JTextField();
+        Quantity = new javax.swing.JTextField();
+        jLabel64 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
@@ -97,8 +97,8 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(108, 108, 108)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 252, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 296, Short.MAX_VALUE)
@@ -123,10 +123,10 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
-        btnView.setText("Process Order");
-        btnView.addActionListener(new java.awt.event.ActionListener() {
+        btnV.setText("Process Order");
+        btnV.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewActionPerformed(evt);
+                btnVActionPerformed(evt);
             }
         });
 
@@ -161,18 +161,18 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
         jLabel7.setText("ITEM :");
 
-        txtPName.setEditable(false);
+        Name.setEditable(false);
 
-        txtItemName.setEditable(false);
+        Item.setEditable(false);
 
-        jLabel6.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/[CITYPNG.COM]HD Green Check True Tick Mark Icon Sign PNG - 2420x2768-2.png"))); // NOI18N
-        jLabel6.setText("SUPPLY");
-        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel64.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
+        jLabel64.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/[CITYPNG.COM]HD Green Check True Tick Mark Icon Sign PNG - 2420x2768-2.png"))); // NOI18N
+        jLabel64.setText("SUPPLY");
+        jLabel64.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
+        jLabel64.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                jLabel64MouseClicked(evt);
             }
         });
 
@@ -190,16 +190,16 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtItemName, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(Item, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
                             .addComponent(jLabel5))
                         .addGap(33, 33, 33)
                         .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtPName, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
-                            .addComponent(txtItemQuantity)
-                            .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(Name, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE)
+                            .addComponent(Quantity)
+                            .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(136, 136, 136))
         );
         jPanel3Layout.setVerticalGroup(
@@ -210,17 +210,17 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel3)
-                    .addComponent(txtPName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(15, 15, 15)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(txtItemName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Item, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(txtItemQuantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Quantity, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(62, 62, 62)
-                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -237,7 +237,7 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 506, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(186, 186, 186)
-                                .addComponent(btnView)))
+                                .addComponent(btnV)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
@@ -252,7 +252,7 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 412, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btnView)
+                        .addComponent(btnV)
                         .addGap(0, 54, Short.MAX_VALUE))
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -284,7 +284,7 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtSearchUserActionPerformed
 
-    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+    private void btnVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVActionPerformed
         // TODO add your handling code here:
         int selectedRowIndex= OrderTable.getSelectedRow();
         
@@ -295,18 +295,18 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
         DefaultTableModel model = (DefaultTableModel) OrderTable.getModel();
         orderrequest ord= (orderrequest) model.getValueAt(selectedRowIndex,0);
         
-        txtPName.setText(ord.getPharmacyID());
-        txtItemName.setText(String.valueOf(ord.getItem()));
-        txtItemQuantity.setText(String.valueOf(ord.getQuantity()));
-    }//GEN-LAST:event_btnViewActionPerformed
+        Name.setText(ord.getPharmacyID());
+        Item.setText(String.valueOf(ord.getItem()));
+        Quantity.setText(String.valueOf(ord.getQuantity()));
+    }//GEN-LAST:event_btnVActionPerformed
 
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         txtSearchUser.setText("");
         populateTable();
-        txtPName.setText("");
-        txtItemName.setText("");
-        txtItemQuantity.setText("");
+        Name.setText("");
+        Item.setText("");
+        Quantity.setText("");
         
     }//GEN-LAST:event_btnRefreshActionPerformed
 
@@ -351,7 +351,7 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnSearchActionPerformed
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void jLabel64MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel64MouseClicked
         // TODO add your handling code here:
         int selectedRowIndex= OrderTable.getSelectedRow();
         
@@ -364,7 +364,7 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
         
         String pharmID = or.getPharmacyID();
         String item = or.getItem();
-        int qty = Integer.parseInt(txtItemQuantity.getText());
+        int qty = Integer.parseInt(Quantity.getText());
         
         Random rand = new Random();
         try {
@@ -385,7 +385,7 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_jLabel64MouseClicked
 
 
     private void populateTable() {
@@ -403,23 +403,23 @@ public class SupplierOrdersProcessorPanel extends javax.swing.JPanel {
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Item;
+    private javax.swing.JTextField Name;
     private javax.swing.JTable OrderTable;
+    private javax.swing.JTextField Quantity;
     private javax.swing.JButton btnRefresh;
     private javax.swing.JButton btnSearch;
-    private javax.swing.JButton btnView;
+    private javax.swing.JButton btnV;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel64;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField txtItemName;
-    private javax.swing.JTextField txtItemQuantity;
-    private javax.swing.JTextField txtPName;
     private javax.swing.JTextField txtSearchUser;
     // End of variables declaration//GEN-END:variables
 }
