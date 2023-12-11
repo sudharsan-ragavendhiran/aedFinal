@@ -41,9 +41,9 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         ViewOrderTable = new javax.swing.JTable();
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel112 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
+        jLabel233 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 0, 0));
 
@@ -74,18 +74,18 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setText("ACCEPT ORDER AND FORWARD FOR PROCESSING");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel112.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
+        jLabel112.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel112.setText("ACCEPT ORDER");
+        jLabel112.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
+                jLabel112MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel1MouseEntered(evt);
+                jLabel112MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel1MouseExited(evt);
+                jLabel112MouseExited(evt);
             }
         });
 
@@ -93,17 +93,14 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(22, Short.MAX_VALUE)
+                .addComponent(jLabel112, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(32, 32, 32)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+            .addComponent(jLabel112, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -120,18 +117,18 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("CANCEL ORDER");
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jLabel233.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
+        jLabel233.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel233.setText("CANCEL ORDER");
+        jLabel233.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
+                jLabel233MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel2MouseEntered(evt);
+                jLabel233MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel2MouseExited(evt);
+                jLabel233MouseExited(evt);
             }
         });
 
@@ -140,43 +137,41 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(115, 115, 115)
-                .addComponent(jLabel2)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap()
+                .addComponent(jLabel233)
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jLabel233, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(77, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap(195, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 903, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 903, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(127, 127, 127))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(127, 127, 127))
+                        .addGap(18, 18, 18)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(363, 363, 363))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(57, 57, 57)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(66, Short.MAX_VALUE))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -201,27 +196,27 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
         jPanel2.setBackground(MouseExitColor);
     }//GEN-LAST:event_jPanel2MouseExited
 
-    private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
+    private void jLabel112MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel112MouseEntered
         // TODO add your handling code here:
-        jLabel1.setBackground(MouseAcceptEnterColor);
-    }//GEN-LAST:event_jLabel1MouseEntered
+        jLabel112.setBackground(MouseAcceptEnterColor);
+    }//GEN-LAST:event_jLabel112MouseEntered
 
-    private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
+    private void jLabel112MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel112MouseExited
         // TODO add your handling code here:
-        jLabel1.setBackground(MouseExitColor);
-    }//GEN-LAST:event_jLabel1MouseExited
+        jLabel112.setBackground(MouseExitColor);
+    }//GEN-LAST:event_jLabel112MouseExited
 
-    private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
+    private void jLabel233MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel233MouseEntered
         // TODO add your handling code here:
-        jLabel2.setBackground(MouseRejectEnterColor);
-    }//GEN-LAST:event_jLabel2MouseEntered
+        jLabel233.setBackground(MouseRejectEnterColor);
+    }//GEN-LAST:event_jLabel233MouseEntered
 
-    private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
+    private void jLabel233MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel233MouseExited
         // TODO add your handling code here:
-        jLabel2.setBackground(MouseExitColor);
-    }//GEN-LAST:event_jLabel2MouseExited
+        jLabel233.setBackground(MouseExitColor);
+    }//GEN-LAST:event_jLabel233MouseExited
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+    private void jLabel112MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel112MouseClicked
         // TODO add your handling code here:
         int selectedRowIndex= ViewOrderTable.getSelectedRow();
         
@@ -245,7 +240,7 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
-    }//GEN-LAST:event_jLabel1MouseClicked
+    }//GEN-LAST:event_jLabel112MouseClicked
 
     private void jPanel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseClicked
         // TODO add your handling code here:
@@ -273,7 +268,7 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jPanel1MouseClicked
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+    private void jLabel233MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel233MouseClicked
         // TODO add your handling code here:
         int selectedRowIndex= ViewOrderTable.getSelectedRow();
         
@@ -297,7 +292,7 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }    
-    }//GEN-LAST:event_jLabel2MouseClicked
+    }//GEN-LAST:event_jLabel233MouseClicked
 
     private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
         // TODO add your handling code here:
@@ -343,8 +338,8 @@ public class SupplierOrderDetails extends javax.swing.JPanel {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable ViewOrderTable;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel112;
+    private javax.swing.JLabel jLabel233;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

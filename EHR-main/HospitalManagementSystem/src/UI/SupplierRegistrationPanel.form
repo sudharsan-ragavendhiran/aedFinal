@@ -78,12 +78,12 @@
                               </Group>
                           </Group>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="txtID" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                              <Component id="txtAddress" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                              <Component id="txtCity" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                              <Component id="txtState" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                              <Component id="txtAreaCode" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
-                              <Component id="txtHName" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                              <Component id="ID" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                              <Component id="Address" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                              <Component id="City" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                              <Component id="State" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                              <Component id="AreaCode" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
+                              <Component id="Name" alignment="0" min="-2" pref="133" max="-2" attributes="0"/>
                               <Component id="jButton1" alignment="0" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
@@ -99,32 +99,32 @@
                   <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtHName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Name" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel4" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtID" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="ID" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="Address" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel7" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtCity" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="City" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtState" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="State" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="jLabel5" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="txtAreaCode" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="AreaCode" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="34" max="32767" attributes="0"/>
                   <Component id="jButton1" min="-2" max="-2" attributes="0"/>
@@ -221,7 +221,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="0" green="0" red="ff" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="AREA CODE :"/>
+            <Property name="text" type="java.lang.String" value="PIN CODE"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel6">
@@ -246,34 +246,34 @@
             <Property name="text" type="java.lang.String" value="CITY :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtHName">
+        <Component class="javax.swing.JTextField" name="Name">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtHNameActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="NameActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtID">
+        <Component class="javax.swing.JTextField" name="ID">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtIDActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IDActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtAddress">
+        <Component class="javax.swing.JTextField" name="Address">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAddressActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddressActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtCity">
+        <Component class="javax.swing.JTextField" name="City">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtCityActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CityActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtState">
+        <Component class="javax.swing.JTextField" name="State">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtStateActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="StateActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtAreaCode">
+        <Component class="javax.swing.JTextField" name="AreaCode">
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtAreaCodeActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AreaCodeActionPerformed"/>
           </Events>
         </Component>
         <Component class="javax.swing.JButton" name="jButton1">
