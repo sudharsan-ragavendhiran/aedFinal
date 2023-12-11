@@ -214,7 +214,7 @@ public class InsuranceEmployeePanel extends javax.swing.JPanel {
         );
 
         jLabel12.setFont(new java.awt.Font("Menlo", 1, 15)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel12.setForeground(new java.awt.Color(255, 51, 0));
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Logout-icon-2.png"))); // NOI18N
         jLabel12.setText("Logout");
         jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {

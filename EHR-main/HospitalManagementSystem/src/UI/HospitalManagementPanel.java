@@ -218,7 +218,7 @@ public class HospitalManagementPanel extends javax.swing.JPanel {
         );
 
         jLabel8.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel8.setForeground(new java.awt.Color(255, 0, 0));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/back-icon.png"))); // NOI18N
         jLabel8.setText("GO BACK");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -270,7 +270,7 @@ public class HospitalManagementPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1478, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1484, Short.MAX_VALUE)
             .addComponent(jSplitPane1)
         );
         layout.setVerticalGroup(
