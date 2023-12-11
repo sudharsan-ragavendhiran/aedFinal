@@ -81,8 +81,8 @@ public class PatientMakePayment extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel1.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("PAY USING CASH/ CREDIT/ DEBIT CARDS");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -95,7 +95,7 @@ public class PatientMakePayment extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(29, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(27, 27, 27))
         );
@@ -118,8 +118,8 @@ public class PatientMakePayment extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel2.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("CLAIM INSURANCE");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -149,7 +149,7 @@ public class PatientMakePayment extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(122, Short.MAX_VALUE)
+                .addContainerGap(73, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 903, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()

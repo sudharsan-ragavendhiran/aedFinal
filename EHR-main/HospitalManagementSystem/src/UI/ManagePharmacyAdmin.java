@@ -61,9 +61,8 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(450, 67));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Very-Basic-Menu-icon.png"))); // NOI18N
@@ -72,17 +71,17 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(153, 153, 153));
         jLabel4.setText("l");
 
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("HOSPITAL");
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("MANAGEMENT");
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Arrows-Forward-icon-2.png"))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("PHARMACY MANAGEMENT");
 
@@ -137,7 +136,7 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        CreateUserJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        CreateUserJPanel.setBackground(new java.awt.Color(255, 0, 0));
         CreateUserJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CreateUserJPanelMouseClicked(evt);
@@ -151,7 +150,7 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
         });
 
         lblUserCreate.setBackground(new java.awt.Color(255, 255, 255));
-        lblUserCreate.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblUserCreate.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblUserCreate.setForeground(new java.awt.Color(255, 255, 255));
         lblUserCreate.setText("REGISTER PHARMACY");
         lblUserCreate.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -173,7 +172,7 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
             .addGroup(CreateUserJPanelLayout.createSequentialGroup()
                 .addGap(78, 78, 78)
                 .addComponent(lblUserCreate)
-                .addContainerGap(86, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CreateUserJPanelLayout.setVerticalGroup(
             CreateUserJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -183,7 +182,7 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        ViewUserJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ViewUserJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ViewUserJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ViewUserJPanelMouseClicked(evt);
@@ -196,7 +195,7 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
             }
         });
 
-        UserViewlbl.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        UserViewlbl.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         UserViewlbl.setForeground(new java.awt.Color(255, 255, 255));
         UserViewlbl.setText("VIEW PHARMACY");
         UserViewlbl.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -255,16 +254,14 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
                 .addComponent(CreateUserJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(ViewUserJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 408, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 403, Short.MAX_VALUE)
                 .addComponent(jLabel8))
         );
 
         jSplitPane1.setLeftComponent(jPanel5);
 
-        jPanel6.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(255, 0, 0));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Remedy-rafiki-2.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -273,17 +270,14 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(192, 192, 192)
                 .addComponent(jLabel9)
-                .addGap(113, 113, 113)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(1057, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(268, 268, 268)
                 .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+                .addContainerGap(397, Short.MAX_VALUE))
         );
 
         jSplitPane1.setRightComponent(jPanel6);
@@ -292,7 +286,7 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1478, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1487, Short.MAX_VALUE)
             .addComponent(jSplitPane1)
         );
         layout.setVerticalGroup(
@@ -383,7 +377,6 @@ public class ManagePharmacyAdmin extends javax.swing.JPanel {
     private javax.swing.JLabel UserViewlbl;
     private javax.swing.JPanel ViewUserJPanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

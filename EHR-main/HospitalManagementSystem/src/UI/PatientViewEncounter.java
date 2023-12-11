@@ -85,9 +85,9 @@ public class PatientViewEncounter extends javax.swing.JPanel {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/search-icon.png"))); // NOI18N
 
-        jLabel2.setBackground(new java.awt.Color(153, 204, 255));
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel2.setBackground(new java.awt.Color(255, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("SEARCH DOCTOR :");
 
         txtSearchUser.addActionListener(new java.awt.event.ActionListener() {
@@ -153,34 +153,30 @@ public class PatientViewEncounter extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(EncounterTable);
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 0, 0));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel3.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel3.setText("DOCTOR NAME :");
 
         jLabel4.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(153, 204, 255));
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel5.setText("COMMENTS");
 
-        jLabel7.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel7.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel7.setText("HOSPITAL :");
 
-        jLabel9.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel9.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel9.setText("BLOOD PRESSURE :");
 
-        jLabel10.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel10.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel10.setText("PULSE :");
 
-        jLabel11.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel11.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel11.setText("TEMPERATURE :");
 
         txtBP.addActionListener(new java.awt.event.ActionListener() {
@@ -204,7 +200,7 @@ public class PatientViewEncounter extends javax.swing.JPanel {
                                 .addComponent(jLabel4))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addGap(73, 73, 73)
-                                .addComponent(txtHospName, javax.swing.GroupLayout.DEFAULT_SIZE, 186, Short.MAX_VALUE))))
+                                .addComponent(txtHospName, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel3)
@@ -219,7 +215,7 @@ public class PatientViewEncounter extends javax.swing.JPanel {
                             .addComponent(txtBP, javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(txtTemp)
                             .addComponent(txtPulse))))
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(135, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

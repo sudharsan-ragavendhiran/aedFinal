@@ -45,7 +45,6 @@ public class SupplierHome extends javax.swing.JPanel {
         jLabel12 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -57,7 +56,7 @@ public class SupplierHome extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        CreateUserJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        CreateUserJPanel.setBackground(new java.awt.Color(255, 0, 0));
         CreateUserJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CreateUserJPanelMouseClicked(evt);
@@ -70,9 +69,8 @@ public class SupplierHome extends javax.swing.JPanel {
             }
         });
 
-        lblUserCreate.setBackground(new java.awt.Color(255, 255, 255));
-        lblUserCreate.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        lblUserCreate.setForeground(new java.awt.Color(255, 255, 255));
+        lblUserCreate.setBackground(new java.awt.Color(0, 0, 0));
+        lblUserCreate.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         lblUserCreate.setText("VIEW ORDERS");
         lblUserCreate.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -103,7 +101,7 @@ public class SupplierHome extends javax.swing.JPanel {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        ViewUserJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ViewUserJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ViewUserJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ViewUserJPanelMouseClicked(evt);
@@ -116,8 +114,8 @@ public class SupplierHome extends javax.swing.JPanel {
             }
         });
 
-        UserViewlbl.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        UserViewlbl.setForeground(new java.awt.Color(255, 255, 255));
+        UserViewlbl.setBackground(new java.awt.Color(0, 0, 0));
+        UserViewlbl.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         UserViewlbl.setText("PROCESS ORDERS");
         UserViewlbl.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -138,7 +136,7 @@ public class SupplierHome extends javax.swing.JPanel {
             .addGroup(ViewUserJPanelLayout.createSequentialGroup()
                 .addGap(89, 89, 89)
                 .addComponent(UserViewlbl)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         ViewUserJPanelLayout.setVerticalGroup(
             ViewUserJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -182,10 +180,8 @@ public class SupplierHome extends javax.swing.JPanel {
 
         jSplitPane1.setLeftComponent(jPanel5);
 
-        jPanel6.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(255, 0, 0));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Messenger-cuate-2.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -194,22 +190,19 @@ public class SupplierHome extends javax.swing.JPanel {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(192, 192, 192)
                 .addComponent(jLabel9)
-                .addGap(113, 113, 113)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(1070, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(268, 268, 268)
                 .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+                .addContainerGap(400, Short.MAX_VALUE))
         );
 
         jSplitPane1.setRightComponent(jPanel6);
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(450, 67));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Very-Basic-Menu-icon.png"))); // NOI18N
@@ -218,8 +211,7 @@ public class SupplierHome extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(153, 153, 153));
         jLabel4.setText("l");
 
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel3.setText("SUPPLIER");
 
         jLabel5.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
@@ -276,7 +268,7 @@ public class SupplierHome extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1478, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1533, Short.MAX_VALUE)
             .addComponent(jSplitPane1)
         );
         layout.setVerticalGroup(
@@ -366,7 +358,6 @@ public class SupplierHome extends javax.swing.JPanel {
     private javax.swing.JLabel UserViewlbl;
     private javax.swing.JPanel ViewUserJPanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

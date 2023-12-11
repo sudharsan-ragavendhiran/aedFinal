@@ -45,7 +45,6 @@ public class UserCRUD extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         txtSearchUser = new javax.swing.JTextField();
         btnSearch = new javax.swing.JButton();
@@ -71,11 +70,9 @@ public class UserCRUD extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/search-icon.png"))); // NOI18N
-
-        jLabel2.setBackground(new java.awt.Color(153, 204, 255));
+        jLabel2.setBackground(new java.awt.Color(255, 0, 0));
         jLabel2.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("SEARCH USER :");
 
         txtSearchUser.addActionListener(new java.awt.event.ActionListener() {
@@ -103,9 +100,7 @@ public class UserCRUD extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(108, 108, 108)
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, 278, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -124,12 +119,10 @@ public class UserCRUD extends javax.swing.JPanel {
                         .addComponent(jLabel2))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(35, 35, 35)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(btnSearch)
-                                .addComponent(btnRefresh))
-                            .addComponent(jLabel1))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtSearchUser, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSearch)
+                            .addComponent(btnRefresh))))
                 .addContainerGap(60, Short.MAX_VALUE))
         );
 
@@ -152,30 +145,30 @@ public class UserCRUD extends javax.swing.JPanel {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        jLabel11.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel11.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 0, 0));
         jLabel11.setText("ORGANISATION :");
 
         txtRole.setEditable(false);
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("NAME :");
 
         txtUserName.setEditable(false);
 
-        jLabel6.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel6.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("USERNAME :");
 
-        jLabel7.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel7.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
         jLabel7.setText("PASSWORD :");
 
         txtOrg.setEditable(false);
 
-        jLabel10.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel10.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 0, 0));
         jLabel10.setText("ROLE :");
 
         btnUpdate.setText("Update");
@@ -451,7 +444,6 @@ public class UserCRUD extends javax.swing.JPanel {
     private javax.swing.JButton btnSearch;
     private javax.swing.JButton btnUpdate;
     private javax.swing.JButton btnView;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;

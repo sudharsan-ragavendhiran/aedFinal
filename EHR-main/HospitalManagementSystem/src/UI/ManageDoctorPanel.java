@@ -53,9 +53,8 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
         jLabel8 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(450, 67));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Very-Basic-Menu-icon.png"))); // NOI18N
@@ -64,17 +63,17 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(153, 153, 153));
         jLabel4.setText("l");
 
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("HOSPITAL");
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("NAME MANAGEMENT");
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Arrows-Forward-icon-2.png"))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("DOCTOR MANAGEMENT");
 
@@ -129,7 +128,7 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        CreateUserJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        CreateUserJPanel.setBackground(new java.awt.Color(255, 0, 0));
         CreateUserJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CreateUserJPanelMouseClicked(evt);
@@ -143,7 +142,7 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
         });
 
         lblUserDoctor.setBackground(new java.awt.Color(255, 255, 255));
-        lblUserDoctor.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblUserDoctor.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblUserDoctor.setForeground(new java.awt.Color(255, 255, 255));
         lblUserDoctor.setText("CREATE DOCTOR");
         lblUserDoctor.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -165,7 +164,7 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
             .addGroup(CreateUserJPanelLayout.createSequentialGroup()
                 .addGap(91, 91, 91)
                 .addComponent(lblUserDoctor)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         CreateUserJPanelLayout.setVerticalGroup(
             CreateUserJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -175,7 +174,7 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        ViewDoctorJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ViewDoctorJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ViewDoctorJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ViewDoctorJPanelMouseClicked(evt);
@@ -188,7 +187,7 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
             }
         });
 
-        lblViewDoctor.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblViewDoctor.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblViewDoctor.setForeground(new java.awt.Color(255, 255, 255));
         lblViewDoctor.setText("VIEW DOCTOR");
         lblViewDoctor.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -243,20 +242,19 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(77, 77, 77)
+                .addGap(87, 87, 87)
                 .addComponent(CreateUserJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(ViewDoctorJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 408, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 396, Short.MAX_VALUE)
                 .addComponent(jLabel8))
         );
 
         jSplitPane1.setLeftComponent(jPanel5);
 
-        jPanel6.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(255, 0, 0));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Doctor-amico-2.png"))); // NOI18N
+        jPanel6.setForeground(new java.awt.Color(255, 0, 0));
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -265,17 +263,14 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(192, 192, 192)
                 .addComponent(jLabel9)
-                .addGap(113, 113, 113)
-                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 614, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addContainerGap(1076, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(268, 268, 268)
                 .addComponent(jLabel9)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jLabel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 658, Short.MAX_VALUE)
+                .addContainerGap(400, Short.MAX_VALUE))
         );
 
         jSplitPane1.setRightComponent(jPanel6);
@@ -284,7 +279,7 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1478, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1543, Short.MAX_VALUE)
             .addComponent(jSplitPane1)
         );
         layout.setVerticalGroup(
@@ -292,7 +287,7 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 61, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSplitPane1))
+                .addComponent(jSplitPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -374,7 +369,6 @@ public class ManageDoctorPanel extends javax.swing.JPanel {
     private javax.swing.JPanel CreateUserJPanel;
     private javax.swing.JPanel ViewDoctorJPanel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

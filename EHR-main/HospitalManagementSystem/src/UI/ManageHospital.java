@@ -59,9 +59,8 @@ public class ManageHospital extends javax.swing.JPanel {
         UserViewlbl = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(450, 67));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Very-Basic-Menu-icon.png"))); // NOI18N
@@ -70,7 +69,7 @@ public class ManageHospital extends javax.swing.JPanel {
         jLabel4.setForeground(new java.awt.Color(153, 153, 153));
         jLabel4.setText("l");
 
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("HOSPITAL");
 
@@ -135,7 +134,7 @@ public class ManageHospital extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        CreateHospitalJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        CreateHospitalJPanel.setBackground(new java.awt.Color(255, 0, 0));
         CreateHospitalJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 CreateHospitalJPanelMouseClicked(evt);
@@ -149,7 +148,7 @@ public class ManageHospital extends javax.swing.JPanel {
         });
 
         lblUserCreate.setBackground(new java.awt.Color(255, 255, 255));
-        lblUserCreate.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblUserCreate.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblUserCreate.setForeground(new java.awt.Color(255, 255, 255));
         lblUserCreate.setText("REGISTER HOSPITAL");
         lblUserCreate.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -171,7 +170,7 @@ public class ManageHospital extends javax.swing.JPanel {
             .addGroup(CreateHospitalJPanelLayout.createSequentialGroup()
                 .addGap(79, 79, 79)
                 .addComponent(lblUserCreate)
-                .addContainerGap(85, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
         CreateHospitalJPanelLayout.setVerticalGroup(
             CreateHospitalJPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,7 +180,7 @@ public class ManageHospital extends javax.swing.JPanel {
                 .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        ViewHospitalJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ViewHospitalJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ViewHospitalJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ViewHospitalJPanelMouseClicked(evt);
@@ -253,32 +252,24 @@ public class ManageHospital extends javax.swing.JPanel {
                 .addComponent(CreateHospitalJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31)
                 .addComponent(ViewHospitalJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 408, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 403, Short.MAX_VALUE)
                 .addComponent(jLabel8))
         );
 
         jSplitPane1.setLeftComponent(jPanel5);
 
-        jPanel6.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(255, 0, 0));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Hospital building-amico-2.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap(276, Short.MAX_VALUE)
-                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 675, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(201, 201, 201))
+            .addGap(0, 1168, Short.MAX_VALUE)
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, 640, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGap(0, 660, Short.MAX_VALUE)
         );
 
         jSplitPane1.setRightComponent(jPanel6);
@@ -385,7 +376,6 @@ public class ManageHospital extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;

@@ -61,7 +61,7 @@ public class RestockRequestPharmacy extends javax.swing.JPanel {
         txtItemQuantity = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 0, 0));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
@@ -75,9 +75,9 @@ public class RestockRequestPharmacy extends javax.swing.JPanel {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/search-icon.png"))); // NOI18N
 
-        jLabel2.setBackground(new java.awt.Color(153, 204, 255));
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel2.setBackground(new java.awt.Color(255, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("SEARCH ITEM :");
 
         txtSearchUser.addActionListener(new java.awt.event.ActionListener() {
@@ -146,27 +146,27 @@ public class RestockRequestPharmacy extends javax.swing.JPanel {
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
         jLabel3.setText("ITEM NAME :");
 
         jLabel4.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(153, 204, 255));
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel5.setFont(new java.awt.Font("Perpetua", 1, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("RESTOCK QUANTITY REQUIRED :");
 
-        jLabel7.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel7.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
         jLabel7.setText("AVAILABLE QUANTITY :");
 
         txtIName.setEditable(false);
 
         txtAqty.setEditable(false);
 
-        jLabel6.setFont(new java.awt.Font("Menlo", 1, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel6.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/[CITYPNG.COM]HD Green Check True Tick Mark Icon Sign PNG - 2420x2768-2.png"))); // NOI18N
         jLabel6.setText("REQUEST SUPPLIER");
         jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));

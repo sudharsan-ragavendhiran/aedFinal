@@ -50,16 +50,18 @@ public class RegisterInsuranceFirm extends javax.swing.JPanel {
         txtAreaCode = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
+
+        jPanel3.setBackground(new java.awt.Color(255, 0, 0));
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
         jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        jPanel5.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel5.setBackground(new java.awt.Color(102, 102, 102));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
-        jLabel1.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("INSURANCE FIRM INFORMATION");
@@ -81,28 +83,28 @@ public class RegisterInsuranceFirm extends javax.swing.JPanel {
                 .addContainerGap(26, Short.MAX_VALUE))
         );
 
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel2.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("FIRM NAME :");
 
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 0, 0));
         jLabel3.setText("FIRM ADDRESS:");
 
-        jLabel4.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel4.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 0, 0));
         jLabel4.setText("FIRM ID :");
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
         jLabel5.setText("AREA CODE :");
 
-        jLabel6.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel6.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("STATE :");
 
-        jLabel7.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel7.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
         jLabel7.setText("CITY :");
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
@@ -141,8 +143,8 @@ public class RegisterInsuranceFirm extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(153, 204, 255));
+        jButton1.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
         jButton1.setText("SAVE");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -219,7 +221,7 @@ public class RegisterInsuranceFirm extends javax.swing.JPanel {
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(297, Short.MAX_VALUE)
+                .addContainerGap(222, Short.MAX_VALUE)
                 .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(247, 247, 247))
         );
@@ -248,7 +250,7 @@ public class RegisterInsuranceFirm extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1156, Short.MAX_VALUE)
+            .addGap(0, 1173, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -257,7 +259,7 @@ public class RegisterInsuranceFirm extends javax.swing.JPanel {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 665, Short.MAX_VALUE)
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -269,7 +271,7 @@ public class RegisterInsuranceFirm extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1156, Short.MAX_VALUE)
+            .addGap(0, 1173, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)
@@ -278,7 +280,7 @@ public class RegisterInsuranceFirm extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 654, Short.MAX_VALUE)
+            .addGap(0, 665, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(0, 0, Short.MAX_VALUE)

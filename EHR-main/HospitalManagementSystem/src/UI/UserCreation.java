@@ -47,7 +47,6 @@ public class UserCreation extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
@@ -83,10 +82,8 @@ public class UserCreation extends javax.swing.JPanel {
         btnSave1 = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(450, 67));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/add-user-icon.png"))); // NOI18N
 
         jLabel2.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,31 +94,25 @@ public class UserCreation extends javax.swing.JPanel {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addGap(18, 18, 18)
+                .addGap(72, 72, 72)
                 .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(1326, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 55, Short.MAX_VALUE)
-                .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel2)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
+        jPanel5.setForeground(new java.awt.Color(102, 102, 102));
 
         jLabel3.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(153, 204, 255));
         jLabel3.setText("Personal Information");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
@@ -141,38 +132,38 @@ public class UserCreation extends javax.swing.JPanel {
                 .addGap(14, 14, 14))
         );
 
-        jPanel6.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel6.setBackground(new java.awt.Color(255, 0, 0));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
-        jLabel4.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("FIRST NAME :");
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("LAST NAME :");
 
-        jLabel6.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("DATE OF BIRTH :");
 
-        jLabel7.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("GENDER :");
 
-        jLabel8.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("PASSWORD :");
 
-        jLabel9.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("USERNAME :");
 
-        jLabel10.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("PHONE NUMBER :");
 
-        jLabel11.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("EMAIL :");
 
@@ -183,7 +174,7 @@ public class UserCreation extends javax.swing.JPanel {
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(72, 166, Short.MAX_VALUE)
+                .addGap(72, 179, Short.MAX_VALUE)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtDOB, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFName, javax.swing.GroupLayout.PREFERRED_SIZE, 229, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -267,7 +258,7 @@ public class UserCreation extends javax.swing.JPanel {
                 .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel7.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel7.setBackground(new java.awt.Color(255, 0, 0));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jLabel12.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
@@ -294,20 +285,20 @@ public class UserCreation extends javax.swing.JPanel {
         jPanel8.setBackground(new java.awt.Color(255, 255, 255));
         jPanel8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(153, 204, 255)));
 
-        jLabel13.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel13.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 0, 0));
         jLabel13.setText("Organisation :");
 
         OrgComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient" }));
 
-        jLabel14.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel14.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 0, 0));
         jLabel14.setText("Role :");
 
         RoleComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient" }));
 
-        btnSave2.setBackground(new java.awt.Color(153, 204, 255));
-        btnSave2.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        btnSave2.setBackground(new java.awt.Color(255, 0, 0));
+        btnSave2.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         btnSave2.setForeground(new java.awt.Color(255, 255, 255));
         btnSave2.setText("send otp");
         btnSave2.addActionListener(new java.awt.event.ActionListener() {
@@ -321,7 +312,7 @@ public class UserCreation extends javax.swing.JPanel {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(202, 202, 202)
+                .addGap(217, 217, 217)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(jPanel8Layout.createSequentialGroup()
                         .addComponent(btnSave2)
@@ -370,8 +361,8 @@ public class UserCreation extends javax.swing.JPanel {
                 .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btnSave1.setBackground(new java.awt.Color(153, 204, 255));
-        btnSave1.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        btnSave1.setBackground(new java.awt.Color(255, 0, 0));
+        btnSave1.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         btnSave1.setForeground(new java.awt.Color(255, 255, 255));
         btnSave1.setText("Back");
         btnSave1.addActionListener(new java.awt.event.ActionListener() {
@@ -380,8 +371,8 @@ public class UserCreation extends javax.swing.JPanel {
             }
         });
 
-        btnSave.setBackground(new java.awt.Color(153, 204, 255));
-        btnSave.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        btnSave.setBackground(new java.awt.Color(255, 0, 0));
+        btnSave.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
         btnSave.setForeground(new java.awt.Color(255, 255, 255));
         btnSave.setText("Save");
         btnSave.addActionListener(new java.awt.event.ActionListener() {
@@ -402,16 +393,16 @@ public class UserCreation extends javax.swing.JPanel {
                         .addGap(18, 18, 18)
                         .addComponent(btnSave1))
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
+                        .addGap(61, 61, 61)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(61, 61, 61)
+                .addGap(64, 64, 64)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -419,14 +410,14 @@ public class UserCreation extends javax.swing.JPanel {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnSave1)
                     .addComponent(btnSave))
-                .addContainerGap(54, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1478, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1550, Short.MAX_VALUE)
             .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -673,7 +664,6 @@ public class UserCreation extends javax.swing.JPanel {
     private javax.swing.JButton btnSave1;
     private javax.swing.JButton btnSave2;
     private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;

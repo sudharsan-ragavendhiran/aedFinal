@@ -51,7 +51,7 @@ public class SupplierViewOrders extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 0, 0));
 
         ViewOrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -80,8 +80,8 @@ public class SupplierViewOrders extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel1.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
         jLabel1.setText("ACCEPT ORDER AND FORWARD FOR PROCESSING");
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -102,7 +102,7 @@ public class SupplierViewOrders extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(16, 16, 16)
                 .addComponent(jLabel1)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -126,8 +126,8 @@ public class SupplierViewOrders extends javax.swing.JPanel {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 16)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel2.setFont(new java.awt.Font("Papyrus", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("CANCEL ORDER");
         jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -163,7 +163,7 @@ public class SupplierViewOrders extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(124, Short.MAX_VALUE)
+                .addContainerGap(77, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 903, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
