@@ -670,12 +670,12 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void ManageUserJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageUserJPanelMouseEntered
         // TODO add your handling code here:
-        ManageUserJPanel.setBackground(MouseEnterColor);
+       
     }//GEN-LAST:event_ManageUserJPanelMouseEntered
 
     private void ManageUserJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageUserJPanelMouseExited
         // TODO add your handling code here:
-        ManageUserJPanel.setBackground(MouseExitColor);
+     
     }//GEN-LAST:event_ManageUserJPanelMouseExited
 
     private void ManageUserJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageUserJPanelMouseClicked
@@ -689,52 +689,52 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void ManageHospitalJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageHospitalJPanelMouseEntered
         // TODO add your handling code here:
-        ManageHospitalJPanel.setBackground(MouseEnterColor);
+       
     }//GEN-LAST:event_ManageHospitalJPanelMouseEntered
 
     private void ManageHospitalJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageHospitalJPanelMouseExited
         // TODO add your handling code here:
-        ManageHospitalJPanel.setBackground(MouseExitColor);
+     
     }//GEN-LAST:event_ManageHospitalJPanelMouseExited
 
     private void ManagePharmacyJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManagePharmacyJPanelMouseEntered
         // TODO add your handling code here:
-        ManagePharmacyJPanel.setBackground(MouseEnterColor);
+       
     }//GEN-LAST:event_ManagePharmacyJPanelMouseEntered
 
     private void ManagePharmacyJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManagePharmacyJPanelMouseExited
         // TODO add your handling code here:
-        ManagePharmacyJPanel.setBackground(MouseExitColor);
+        
     }//GEN-LAST:event_ManagePharmacyJPanelMouseExited
 
     private void ManageInsuranceJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageInsuranceJPanelMouseEntered
         // TODO add your handling code here:
-        ManageInsuranceJPanel.setBackground(MouseEnterColor);
+        
     }//GEN-LAST:event_ManageInsuranceJPanelMouseEntered
 
     private void ManageInsuranceJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageInsuranceJPanelMouseExited
         // TODO add your handling code here:
-        ManageInsuranceJPanel.setBackground(MouseExitColor);
+       
     }//GEN-LAST:event_ManageInsuranceJPanelMouseExited
 
     private void ManageSupplierJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageSupplierJPanelMouseEntered
         // TODO add your handling code here:
-        ManageSupplierJPanel.setBackground(MouseEnterColor);
+       
     }//GEN-LAST:event_ManageSupplierJPanelMouseEntered
 
     private void ManageSupplierJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageSupplierJPanelMouseExited
         // TODO add your handling code here:
-        ManageSupplierJPanel.setBackground(MouseExitColor);
+        
     }//GEN-LAST:event_ManageSupplierJPanelMouseExited
 
     private void lblCreateUserMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCreateUserMouseEntered
         // TODO add your handling code here:
-        lblCreateUser.setBackground(MouseEnterColor);
+       
     }//GEN-LAST:event_lblCreateUserMouseEntered
 
     private void lblCreateUserMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCreateUserMouseExited
         // TODO add your handling code here:
-        lblCreateUser.setBackground(MouseExitColor);
+       
     }//GEN-LAST:event_lblCreateUserMouseExited
 
     private void ManageHospitalJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageHospitalJPanelMouseClicked
