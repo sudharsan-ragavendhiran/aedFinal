@@ -161,11 +161,9 @@ public class AdminHome extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         ManageUserJPanel = new javax.swing.JPanel();
         lblCreateUser = new javax.swing.JLabel();
@@ -195,29 +193,21 @@ public class AdminHome extends javax.swing.JPanel {
         lblIT = new javax.swing.JLabel();
         lblST = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Very-Basic-Menu-icon.png"))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Users-icon.png"))); // NOI18N
-        jLabel2.setText(" Welcome Admin!");
-
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel4.setText("l");
 
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("HOSPITAL");
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("MANAGEMENT");
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/User-Interface-Menu-icon.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -225,18 +215,14 @@ public class AdminHome extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel1)
+                .addGap(22, 22, 22)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addGap(12, 12, 12)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -244,15 +230,12 @@ public class AdminHome extends javax.swing.JPanel {
                 .addGap(14, 14, 14)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel5))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
+                        .addGap(91, 91, 91)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -260,7 +243,7 @@ public class AdminHome extends javax.swing.JPanel {
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        ManageUserJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ManageUserJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ManageUserJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManageUserJPanelMouseClicked(evt);
@@ -273,7 +256,7 @@ public class AdminHome extends javax.swing.JPanel {
             }
         });
 
-        lblCreateUser.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblCreateUser.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblCreateUser.setForeground(new java.awt.Color(255, 255, 255));
         lblCreateUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCreateUser.setText("MANAGE USER");
@@ -306,7 +289,7 @@ public class AdminHome extends javax.swing.JPanel {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        ManageHospitalJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ManageHospitalJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ManageHospitalJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManageHospitalJPanelMouseClicked(evt);
@@ -319,7 +302,7 @@ public class AdminHome extends javax.swing.JPanel {
             }
         });
 
-        lblRegHospital.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblRegHospital.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblRegHospital.setForeground(new java.awt.Color(255, 255, 255));
         lblRegHospital.setText("MANAGE HOSPITAL");
 
@@ -340,7 +323,7 @@ public class AdminHome extends javax.swing.JPanel {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        ManagePharmacyJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ManagePharmacyJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ManagePharmacyJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManagePharmacyJPanelMouseClicked(evt);
@@ -353,7 +336,7 @@ public class AdminHome extends javax.swing.JPanel {
             }
         });
 
-        lblRegPharmacy.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblRegPharmacy.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblRegPharmacy.setForeground(new java.awt.Color(255, 255, 255));
         lblRegPharmacy.setText("MANAGE PHARMACY");
         lblRegPharmacy.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -379,7 +362,7 @@ public class AdminHome extends javax.swing.JPanel {
                 .addContainerGap(20, Short.MAX_VALUE))
         );
 
-        ManageInsuranceJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ManageInsuranceJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ManageInsuranceJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManageInsuranceJPanelMouseClicked(evt);
@@ -392,7 +375,7 @@ public class AdminHome extends javax.swing.JPanel {
             }
         });
 
-        lblRegisterIns.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblRegisterIns.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblRegisterIns.setForeground(new java.awt.Color(255, 255, 255));
         lblRegisterIns.setText("MANAGE INSURANCE FIRM");
         lblRegisterIns.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -418,7 +401,7 @@ public class AdminHome extends javax.swing.JPanel {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        ManageSupplierJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ManageSupplierJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ManageSupplierJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManageSupplierJPanelMouseClicked(evt);
@@ -431,7 +414,7 @@ public class AdminHome extends javax.swing.JPanel {
             }
         });
 
-        lblRegSupplier.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblRegSupplier.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblRegSupplier.setForeground(new java.awt.Color(255, 255, 255));
         lblRegSupplier.setText("MANAGE SUPPLIER");
         lblRegSupplier.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -484,10 +467,10 @@ public class AdminHome extends javax.swing.JPanel {
                 .addComponent(ManageInsuranceJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(ManageSupplierJPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(287, Short.MAX_VALUE))
+                .addContainerGap(312, Short.MAX_VALUE))
         );
 
-        jPanel8.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel8.setBackground(new java.awt.Color(255, 0, 0));
 
         jLabel12.setFont(new java.awt.Font("Menlo", 1, 15)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -569,23 +552,23 @@ public class AdminHome extends javax.swing.JPanel {
         ));
         jScrollPane5.setViewportView(HospitalTable);
 
-        lblPT.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblPT.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblPT.setForeground(new java.awt.Color(255, 255, 255));
         lblPT.setText("Pharmacy");
 
-        lblUT.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblUT.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblUT.setForeground(new java.awt.Color(255, 255, 255));
         lblUT.setText("User");
 
-        lblHosT.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblHosT.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblHosT.setForeground(new java.awt.Color(255, 255, 255));
         lblHosT.setText("Hospital");
 
-        lblIT.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblIT.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblIT.setForeground(new java.awt.Color(255, 255, 255));
         lblIT.setText("Insurance");
 
-        lblST.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblST.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblST.setForeground(new java.awt.Color(255, 255, 255));
         lblST.setText("Supplier");
 
@@ -608,7 +591,7 @@ public class AdminHome extends javax.swing.JPanel {
                 .addComponent(lblST)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addGap(0, 91, Short.MAX_VALUE)
+                .addGap(0, 17, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
                         .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -616,7 +599,7 @@ public class AdminHome extends javax.swing.JPanel {
                                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(lblUT)
-                                .addGap(83, 83, 83)
+                                .addGap(78, 78, 78)
                                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel8Layout.createSequentialGroup()
                                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -628,7 +611,7 @@ public class AdminHome extends javax.swing.JPanel {
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(16, Short.MAX_VALUE)
+                .addContainerGap(63, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblPT, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblHosT))
@@ -842,11 +825,9 @@ public class AdminHome extends javax.swing.JPanel {
     private javax.swing.JTable UserTable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel8;

@@ -67,13 +67,11 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
         lblRegHospital = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
-        jPanel8.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel8.setBackground(new java.awt.Color(255, 0, 0));
 
         jLabel12.setFont(new java.awt.Font("Menlo", 1, 15)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
@@ -113,11 +111,11 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
         ));
         jScrollPane3.setViewportView(InsuranceRequestTable);
 
-        lblUT.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblUT.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         lblUT.setForeground(new java.awt.Color(255, 255, 255));
         lblUT.setText("Employee");
 
-        lblIT.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblIT.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         lblIT.setForeground(new java.awt.Color(255, 255, 255));
         lblIT.setText("Insurance");
 
@@ -126,7 +124,7 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addGap(0, 1029, Short.MAX_VALUE)
+                .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(295, 295, 295)
@@ -144,22 +142,22 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addContainerGap(189, Short.MAX_VALUE)
+                .addContainerGap(67, Short.MAX_VALUE)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(lblUT, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lblIT, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(45, 45, 45)
+                .addGap(147, 147, 147)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(189, 189, Short.MAX_VALUE)
+                .addGap(69, 69, Short.MAX_VALUE)
                 .addComponent(jLabel12)
                 .addContainerGap())
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        ManageUserJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ManageUserJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ManageUserJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManageUserJPanelMouseClicked(evt);
@@ -172,7 +170,7 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
             }
         });
 
-        lblCreateUser.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblCreateUser.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblCreateUser.setForeground(new java.awt.Color(255, 255, 255));
         lblCreateUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCreateUser.setText("MANAGE EMPLOYEE");
@@ -205,7 +203,7 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        ManageHospitalJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ManageHospitalJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ManageHospitalJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManageHospitalJPanelMouseClicked(evt);
@@ -218,7 +216,7 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
             }
         });
 
-        lblRegHospital.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblRegHospital.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblRegHospital.setForeground(new java.awt.Color(255, 255, 255));
         lblRegHospital.setText("MANAGE INSURANCE");
         lblRegHospital.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -271,29 +269,22 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Very-Basic-Menu-icon.png"))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/pngwing.com-2.png"))); // NOI18N
-        jLabel2.setText(" Welcome!");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel4.setText("l");
-
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("INSURANCE");
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("FIRM MANAGEMENT");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/User-Interface-Menu-icon.png"))); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Papyrus", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText(" Welcome!");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -301,40 +292,27 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1)
+                .addGap(42, 42, 42)
                 .addComponent(jLabel3)
                 .addGap(12, 12, 12)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 795, Short.MAX_VALUE)
+                .addComponent(jLabel4)
+                .addGap(91, 91, 91))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(91, 91, 91)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel5)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2)))
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel5)
+                    .addComponent(jLabel4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -346,7 +324,8 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel8, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -478,11 +457,9 @@ public class InsuranceHeadHome extends javax.swing.JPanel {
     private javax.swing.JPanel ManageUserJPanel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel8;

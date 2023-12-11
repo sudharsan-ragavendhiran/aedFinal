@@ -75,48 +75,39 @@ public class HospitalAdminHome extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         ManageDoctorJPanel = new javax.swing.JPanel();
         lblCreateUser = new javax.swing.JLabel();
         ViewEncounters = new javax.swing.JPanel();
         lblViewEncounter = new javax.swing.JLabel();
         jPanel8 = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         PatientTable = new javax.swing.JTable();
         jScrollPane4 = new javax.swing.JScrollPane();
         DoctorTable = new javax.swing.JTable();
         lblUT = new javax.swing.JLabel();
         lblST = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(153, 204, 255));
+        jPanel1.setBackground(new java.awt.Color(255, 0, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Very-Basic-Menu-icon.png"))); // NOI18N
 
-        jLabel2.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/PngItem_1985212-2.png"))); // NOI18N
-        jLabel2.setText(" Welcome Hospital Admin!");
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel4.setText("l");
-
-        jLabel3.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("HOSPITAL");
 
-        jLabel5.setFont(new java.awt.Font("Menlo", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Papyrus", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("NAME MANAGEMENT");
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/User-Interface-Menu-icon.png"))); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Papyrus", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText(" Welcome Hospital Admin!");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -124,18 +115,14 @@ public class HospitalAdminHome extends javax.swing.JPanel {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 8, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1)
+                .addGap(42, 42, 42)
                 .addComponent(jLabel3)
                 .addGap(12, 12, 12)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addContainerGap())
+                .addComponent(jLabel4)
+                .addGap(106, 106, 106))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,22 +131,17 @@ public class HospitalAdminHome extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5)
-                    .addComponent(jLabel2))
+                    .addComponent(jLabel4))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(91, 91, 91)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
 
-        ManageDoctorJPanel.setBackground(new java.awt.Color(153, 204, 255));
+        ManageDoctorJPanel.setBackground(new java.awt.Color(255, 0, 0));
         ManageDoctorJPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ManageDoctorJPanelMouseClicked(evt);
@@ -172,7 +154,7 @@ public class HospitalAdminHome extends javax.swing.JPanel {
             }
         });
 
-        lblCreateUser.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblCreateUser.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblCreateUser.setForeground(new java.awt.Color(255, 255, 255));
         lblCreateUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCreateUser.setText("MANAGE DOCTOR");
@@ -205,7 +187,7 @@ public class HospitalAdminHome extends javax.swing.JPanel {
                 .addContainerGap(18, Short.MAX_VALUE))
         );
 
-        ViewEncounters.setBackground(new java.awt.Color(153, 204, 255));
+        ViewEncounters.setBackground(new java.awt.Color(255, 0, 0));
         ViewEncounters.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 ViewEncountersMouseClicked(evt);
@@ -218,7 +200,7 @@ public class HospitalAdminHome extends javax.swing.JPanel {
             }
         });
 
-        lblViewEncounter.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblViewEncounter.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblViewEncounter.setForeground(new java.awt.Color(255, 255, 255));
         lblViewEncounter.setText("VIEW ENCOUNTERS");
         lblViewEncounter.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -232,7 +214,7 @@ public class HospitalAdminHome extends javax.swing.JPanel {
         ViewEncountersLayout.setHorizontalGroup(
             ViewEncountersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ViewEncountersLayout.createSequentialGroup()
-                .addContainerGap(48, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblViewEncounter)
                 .addGap(34, 34, 34))
         );
@@ -265,17 +247,7 @@ public class HospitalAdminHome extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel8.setBackground(new java.awt.Color(153, 204, 255));
-
-        jLabel12.setFont(new java.awt.Font("Menlo", 1, 15)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/Logout-icon-2.png"))); // NOI18N
-        jLabel12.setText("Logout");
-        jLabel12.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel12MouseClicked(evt);
-            }
-        });
+        jPanel8.setBackground(new java.awt.Color(255, 0, 0));
 
         PatientTable.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
         PatientTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -305,13 +277,17 @@ public class HospitalAdminHome extends javax.swing.JPanel {
         ));
         jScrollPane4.setViewportView(DoctorTable);
 
-        lblUT.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblUT.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblUT.setForeground(new java.awt.Color(255, 255, 255));
         lblUT.setText("Patient Encounter Details");
 
-        lblST.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
+        lblST.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         lblST.setForeground(new java.awt.Color(255, 255, 255));
         lblST.setText("Doctor Details");
+
+        jLabel2.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Logout");
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
@@ -323,20 +299,23 @@ public class HospitalAdminHome extends javax.swing.JPanel {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
                 .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(98, 98, 98))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 86, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(185, 185, 185)
                 .addComponent(lblUT)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(lblST)
                 .addGap(231, 231, 231))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel8Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 132, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(86, 86, 86))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(195, 195, 195)
+                .addGap(22, 22, 22)
+                .addComponent(jLabel2)
+                .addGap(153, 153, 153)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(lblUT)
                     .addComponent(lblST))
@@ -344,9 +323,7 @@ public class HospitalAdminHome extends javax.swing.JPanel {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
-                .addComponent(jLabel12)
-                .addContainerGap())
+                .addContainerGap(234, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -427,14 +404,6 @@ public class HospitalAdminHome extends javax.swing.JPanel {
         ViewEncounters.setBackground(MouseExitColor);
     }//GEN-LAST:event_ViewEncountersMouseExited
 
-    private void jLabel12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel12MouseClicked
-        // TODO add your handling code here:
-        Login login1 = new Login();
-        Login login = (Login) SwingUtilities.getRoot(this);
-        login1.setVisible(true);
-        login.setVisible(false);
-    }//GEN-LAST:event_jLabel12MouseClicked
-
     private void lblViewEncounterMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblViewEncounterMouseClicked
         // TODO add your handling code here:
         VEncounterAdmin  vea = new VEncounterAdmin(username);
@@ -451,12 +420,10 @@ public class HospitalAdminHome extends javax.swing.JPanel {
     private javax.swing.JTable PatientTable;
     private javax.swing.JPanel ViewEncounters;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel8;
