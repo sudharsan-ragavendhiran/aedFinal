@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Model;
 
 import SQLConnection.SQLConnection;
@@ -12,10 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author slaks
- */
+
 public class EncounterData {
     private ArrayList<Encounter> EncounterData;
     
@@ -29,104 +23,90 @@ public class EncounterData {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from EncounterData";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             
-             while(st.next())
+             while(res.next())
              {
-                 Encounter p=new Encounter();               
-                 p.setPatientUsername(st.getString("patientusername"));                
-                 p.setDoctorUsername(st.getString("doctorusername"));
-                 p.setType(st.getString("type"));
-                 p.setTemp(st.getString("temp"));
-                 p.setPulse(st.getString("pulse"));
-                 p.setBp(st.getString("bp"));
-                 p.setComments(st.getString("comments"));
-                 p.setDoctorName(st.getString("doctorname"));
-                 p.setHospital(st.getString("hospital"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
-                
-                 EncounterData1.add(p);
+                 Encounter encounter=new Encounter();               
+                 encounter.setPatientUsername(res.getString("patientusername"));                
+                 encounter.setDoctorUsername(res.getString("doctorusername"));
+                 encounter.setType(res.getString("type"));
+                 encounter.setTemp(res.getString("temp"));
+                 encounter.setPulse(res.getString("pulse"));
+                 encounter.setBp(res.getString("bp"));
+                 encounter.setComments(res.getString("comments"));
+                 encounter.setDoctorName(res.getString("doctorname"));
+                 encounter.setHospital(res.getString("hospital"));                
+                 EncounterData1.add(encounter);
            
              }
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
         return EncounterData1;
     }
     public ArrayList<Encounter> getEncounterDataFromDbForPatient(String patUsername, String type) {
-        ArrayList<Encounter> EncounterData1 = new ArrayList();
+        ArrayList<Encounter> EncounterList = new ArrayList();
         try {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from EncounterData where patientusername ='"+patUsername+"' AND type = '"+type+"';";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             
-             while(st.next())
+             while(res.next())
              {
                  Encounter p=new Encounter();               
-                 p.setPatientUsername(st.getString("patientusername"));                
-                 p.setDoctorUsername(st.getString("doctorusername"));
-                 p.setType(st.getString("type"));
-                 p.setTemp(st.getString("temp"));
-                 p.setPulse(st.getString("pulse"));
-                 p.setBp(st.getString("bp"));
-                 p.setComments(st.getString("comments"));
-                 p.setDoctorName(st.getString("doctorname"));
-                 p.setHospital(st.getString("hospital"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
-                
-                 EncounterData1.add(p);
-                 //break;
+                 p.setPatientUsername(res.getString("patientusername"));                
+                 p.setDoctorUsername(res.getString("doctorusername"));
+                 p.setType(res.getString("type"));
+                 p.setTemp(res.getString("temp"));
+                 p.setPulse(res.getString("pulse"));
+                 p.setBp(res.getString("bp"));
+                 p.setComments(res.getString("comments"));
+                 p.setDoctorName(res.getString("doctorname"));
+                 p.setHospital(res.getString("hospital"));                
+                 EncounterList.add(p);
            
              }
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
-        return EncounterData1;
+        return EncounterList;
     }
     
     public ArrayList<Encounter> getEncounterDataFromDbForDoctor(String docUsername, String type) {
-        ArrayList<Encounter> EncounterData1 = new ArrayList();
+        ArrayList<Encounter> EncounterList = new ArrayList();
         try {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from EncounterData where doctorusername ='"+docUsername+"' AND type = '"+type+"';";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             
-             while(st.next())
+             while(res.next())
              {
                  Encounter p=new Encounter();               
-                 p.setPatientUsername(st.getString("patientusername"));                
-                 p.setDoctorUsername(st.getString("doctorusername"));
-                 p.setType(st.getString("type"));
-                 p.setTemp(st.getString("temp"));
-                 p.setPulse(st.getString("pulse"));
-                 p.setBp(st.getString("bp"));
-                 p.setComments(st.getString("comments"));
-                 p.setDoctorName(st.getString("doctorname"));
-                 p.setHospital(st.getString("hospital"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
-                
-                 EncounterData1.add(p);
-                 //break;
+                 p.setPatientUsername(res.getString("patientusername"));                
+                 p.setDoctorUsername(res.getString("doctorusername"));
+                 p.setType(res.getString("type"));
+                 p.setTemp(res.getString("temp"));
+                 p.setPulse(res.getString("pulse"));
+                 p.setBp(res.getString("bp"));
+                 p.setComments(res.getString("comments"));
+                 p.setDoctorName(res.getString("doctorname"));
+                 p.setHospital(res.getString("hospital"));                
+                 EncounterList.add(p);
            
              }
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
-        return EncounterData1;
+        return EncounterList;
     }
     
     public ArrayList<Encounter> getEncounterData() {
@@ -145,20 +125,16 @@ public class EncounterData {
     
     public void deleteEncounter(Encounter encounter){
         try {
-            // userName
             String userName= encounter.getPatientUsername();
             Connection con=SQLConnection.dbconnector();
             Statement stmt=con.createStatement();
             String qry = "USE test";
             stmt.executeUpdate(qry);
             qry="DELETE FROM EncounterData WHERE username = '"+userName+"'";
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
-            //ResultSet st=ps.executeQuery();
             EncounterData.remove(encounter);
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }  
     }
@@ -172,11 +148,9 @@ public class EncounterData {
             String qry = "USE test";
             stmt.executeUpdate(qry);
             qry="INSERT INTO EncounterData(patientusername, doctorusername, type, temp, pulse, bp, comments, hospital, doctorname) VALUES ('"+encounter.getPatientUsername()+"','"+encounter.getDoctorUsername()+"','"+encounter.getType()+"','"+encounter.getTemp()+"','"+encounter.getPulse()+"','"+encounter.getBp()+"','"+encounter.getComments()+"','"+encounter.getHospital()+"','"+encounter.getDoctorName()+"')";
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Model;
 
 import SQLConnection.SQLConnection;
@@ -12,10 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author slaks
- */
+
 public class SupplierData {
     private ArrayList<Supplier> SupplierData;
     
@@ -29,28 +23,24 @@ public class SupplierData {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from SupplierData";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             
-             while(st.next())
+             while(res.next())
              {
-                 Supplier p=new Supplier();               
-                 p.setId(st.getString("id"));                
-                 p.setCity(st.getString("city"));
-                 p.setAddress(st.getString("address"));
-                 p.setName(st.getString("name"));
-                 p.setState(st.getString("state"));
-                 p.setAreacode(st.getString("areacode"));
-//                 p.setCommunity(st.getString("Community"));
-//                 p.setResidence(st.getString("Residence"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
+                 Supplier supplier=new Supplier();               
+                 supplier.setId(res.getString("id"));                
+                 supplier.setCity(res.getString("city"));
+                 supplier.setAddress(res.getString("address"));
+                 supplier.setName(res.getString("name"));
+                 supplier.setState(res.getString("state"));
+                 supplier.setAreacode(res.getString("areacode"));
+
                 
-                 SupplierData1.add(p);
+                 SupplierData1.add(supplier);
            
              }
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
@@ -73,20 +63,16 @@ public class SupplierData {
     
     public void deleteSupplier(Supplier supplier){
         try {
-            // userName
             String userName= supplier.getId();
             Connection con=SQLConnection.dbconnector();
             Statement stmt=con.createStatement();
             String qry = "USE test";
             stmt.executeUpdate(qry);
             qry="DELETE FROM SupplierData WHERE username = '"+userName+"'";
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
-            //ResultSet st=ps.executeQuery();
             SupplierData.remove(supplier);
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }  
     }
@@ -100,11 +86,9 @@ public class SupplierData {
             String qry = "USE test";
             stmt.executeUpdate(qry);
             qry="INSERT INTO SupplierData(id, name, address, city, state, areacode) VALUES ('"+supplier.getId()+"','"+supplier.getName()+"','"+supplier.getAddress()+"','"+supplier.getCity()+"','"+supplier.getState()+"','"+supplier.getAreacode()+"')";
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
@@ -115,19 +99,18 @@ public class SupplierData {
             Connection con=SQLConnection.dbconnector();
             String sql= "SELECT * FROM supplierdata;";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             ArrayList<String> ar = new ArrayList<String>();
-             while(st.next())
+             while(res.next())
              {
              
-                   String a= st.getString("name");  
+                   String a= res.getString("name");  
                    ar.add(a);
              }
              return ar;
              
         } 
              catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         return null;

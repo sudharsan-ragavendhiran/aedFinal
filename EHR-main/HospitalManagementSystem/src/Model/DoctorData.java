@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Model;
 
 import SQLConnection.SQLConnection;
@@ -12,10 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author slaks
- */
+
 public class DoctorData {
     private ArrayList<Doctor> DoctorData;
     
@@ -24,38 +18,33 @@ public class DoctorData {
     }
     
     public ArrayList<Doctor> getDoctorDataFromDb() {
-        ArrayList<Doctor> DoctorData1 = new ArrayList();
+        ArrayList<Doctor> DoctorList = new ArrayList();
         try {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from DoctorData";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             
-             while(st.next())
+             while(res.next())
              {
-                 Doctor p=new Doctor();               
-                 p.setUsername(st.getString("username"));                
-                 p.setDob(st.getString("dob"));
-                 p.setName(st.getString("name"));
-                 p.setGender(st.getString("gender"));
-                 p.setEmail(st.getString("email"));
-                 p.setPhoneNumber(st.getString("phonenumber"));
-                 p.setSpecialisation(st.getString("specialisation"));
-                 p.setHospitalName(st.getString("hospital"));
-//                 p.setResidence(st.getString("Residence"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
-                
-                 DoctorData1.add(p);
+                 Doctor doc=new Doctor();               
+                 doc.setUsername(res.getString("username"));                
+                 doc.setDob(res.getString("dob"));
+                 doc.setName(res.getString("name"));
+                 doc.setGender(res.getString("gender"));
+                 doc.setEmail(res.getString("email"));
+                 doc.setPhoneNumber(res.getString("phonenumber"));
+                 doc.setSpecialisation(res.getString("specialisation"));
+                 doc.setHospitalName(res.getString("hospital"));
+                 DoctorList.add(doc);
            
              }
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
-        return DoctorData1;
+        return DoctorList;
     }
 
     public ArrayList<Doctor> getDoctorData() {
@@ -74,20 +63,16 @@ public class DoctorData {
     
     public void deleteDoctor(Doctor doctor){
         try {
-            // userName
             String userName= doctor.getUsername();
             Connection con=SQLConnection.dbconnector();
             Statement stmt=con.createStatement();
             String qry = "USE test";
             stmt.executeUpdate(qry);
             qry="DELETE FROM DoctorData WHERE username = '"+userName+"'";
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
-            //ResultSet st=ps.executeQuery();
             DoctorData.remove(doctor);
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }  
     }
@@ -101,11 +86,9 @@ public class DoctorData {
             String qry = "USE test;";
             stmt.executeUpdate(qry);
             qry="INSERT INTO DoctorData(username, name, dob, gender, email, phonenumber, specialisation, hospital) VALUES ('"+doctor.getUsername()+"','"+doctor.getName()+"','"+doctor.getDob()+"','"+doctor.getGender()+"','"+doctor.getEmail()+"','"+doctor.getPhoneNumber()+"','"+doctor.getSpecialisation()+"','"+doctor.getHospitalName()+"')";
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
@@ -116,16 +99,15 @@ public class DoctorData {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from UserData where username = '"+text+"'";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             
-             while(st.next()){
-                 String op = st.getString("orgName");
+             while(res.next()){
+                 String op = res.getString("orgName");
                  return op;
              }
             
         }catch (SQLException ex) {
 
-            //Logger.getLogger(UserData.class.getName()).log(Level.SEVERE, null, ex);
 
             System.out.print(ex.getMessage());
         }

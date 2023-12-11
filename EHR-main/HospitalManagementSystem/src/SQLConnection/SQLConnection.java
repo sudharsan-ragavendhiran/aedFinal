@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package SQLConnection;
 import java.io.FileReader;
 import java.sql.Connection;
@@ -13,14 +10,10 @@ import org.json.simple.parser.*;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-//import org.json.JSONTokener
 
         
 
-/**
- *
- * @author sudharsan
- */
+
 public class SQLConnection {
     Connection con=null;
     public static Connection dbconnector()
@@ -40,8 +33,6 @@ public class SQLConnection {
             String pwd= jObj2.get("password").toString();
             System.out.print("2");
             System.out.println(url+","+userName+","+pwd);
-           // Class.forName("org.sqlite.JDBC");
-            //Connection con=DriverManager.getConnection("jdbc:sqlite://Users//sudharsan//Desktop//testDB.db");
             Connection con=DriverManager.getConnection(url,userName, pwd);
             System.out.print("Connection Sucessfull");
             Statement stmt=con.createStatement();
