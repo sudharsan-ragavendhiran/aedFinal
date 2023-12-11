@@ -149,11 +149,11 @@ public class PharmacyDetailsAdminPanel extends javax.swing.JPanel {
 
         jLabel12.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel12.setText("PHARMACY NAME:");
+        jLabel12.setText(" NAME:");
 
         jLabel11.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel11.setText("PHARMACY ID :");
+        jLabel11.setText(" ID :");
 
         jLabel6.setFont(new java.awt.Font("Papyrus", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));

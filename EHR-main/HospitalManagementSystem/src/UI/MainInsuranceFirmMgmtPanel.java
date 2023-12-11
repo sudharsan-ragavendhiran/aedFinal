@@ -273,12 +273,12 @@ public class MainInsuranceFirmMgmtPanel extends javax.swing.JPanel {
 
     private void lblUserCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserCreateMouseEntered
         // TODO add your handling code here:
-        lblUserCreate.setBackground(MouseEnterColor);
+        
     }//GEN-LAST:event_lblUserCreateMouseEntered
 
     private void lblUserCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserCreateMouseExited
         // TODO add your handling code here:
-        lblUserCreate.setBackground(MouseExitColor);
+       
     }//GEN-LAST:event_lblUserCreateMouseExited
 
     private void CreateUserJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateUserJPanelMouseClicked
@@ -305,12 +305,12 @@ public class MainInsuranceFirmMgmtPanel extends javax.swing.JPanel {
 
     private void UserViewlblMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserViewlblMouseEntered
         // TODO add your handling code here:
-        UserViewlbl.setBackground(MouseEnterColor);
+       
     }//GEN-LAST:event_UserViewlblMouseEntered
 
     private void UserViewlblMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserViewlblMouseExited
         // TODO add your handling code here:
-        UserViewlbl.setBackground(MouseExitColor);
+       
     }//GEN-LAST:event_UserViewlblMouseExited
 
     private void ViewUserJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewUserJPanelMouseClicked
