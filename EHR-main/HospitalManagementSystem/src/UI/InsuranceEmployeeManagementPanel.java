@@ -145,7 +145,7 @@ public class InsuranceEmployeeManagementPanel extends javax.swing.JPanel {
         );
 
         jLabel8.setFont(new java.awt.Font("Menlo", 1, 13)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(153, 204, 255));
+        jLabel8.setForeground(new java.awt.Color(255, 51, 0));
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/ICONS/back-icon.png"))); // NOI18N
         jLabel8.setText("GO BACK");
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
