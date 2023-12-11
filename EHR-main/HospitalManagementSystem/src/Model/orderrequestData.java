@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Model;
 
 import SQLConnection.SQLConnection;
@@ -12,10 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author lokeshbalamurugan
- */
+
 public class orderrequestData {
 
     private ArrayList<orderrequest> orderData;
@@ -30,28 +24,24 @@ public class orderrequestData {
             Connection con = SQLConnection.dbconnector();
             String sql = "select * from supplierrequest";
             PreparedStatement ps = con.prepareStatement(sql);
-            ResultSet st = ps.executeQuery();
+            ResultSet res = ps.executeQuery();
 
-            while (st.next()) {
-                orderrequest or = new orderrequest();
-                or.setPharmacyID(st.getString("pharmacyid"));
-                or.setSupplierID(st.getString("supplierid"));
-                or.setItem(st.getString("item"));
-                or.setStatus(st.getString("status"));
-                or.setPrice(st.getInt("price"));
-                or.setQuantity(st.getInt("quantity"));
-                or.setOldquantity(st.getInt("oldquantity"));
-//                 p.setCommunity(st.getString("Community"));
-//                 p.setResidence(st.getString("Residence"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
+            while (res.next()) {
+                orderrequest req = new orderrequest();
+                req.setPharmacyID(res.getString("pharmacyid"));
+                req.setSupplierID(res.getString("supplierid"));
+                req.setItem(res.getString("item"));
+                req.setStatus(res.getString("status"));
+                req.setPrice(res.getInt("price"));
+                req.setQuantity(res.getInt("quantity"));
+                req.setOldquantity(res.getInt("oldquantity"));
 
-                orderData1.add(or);
+
+                orderData1.add(req);
 
             }
 
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
 
@@ -74,11 +64,9 @@ public class orderrequestData {
             String qry = "USE test;";
             stmt.executeUpdate(qry);
             qry = "INSERT INTO supplierrequest(pharmacyid, supplierid, item, quantity, price, status) VALUES ('" + or.getPharmacyID() + "','" + or.getSupplierID() + "','" + or.getItem() + "','" + or.getQuantity() + "','" + or.getPrice() + "','" + or.getStatus() + "')";
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
 
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
 
@@ -90,28 +78,23 @@ public class orderrequestData {
             Connection con = SQLConnection.dbconnector();
             String sql = "select * from supplierrequest where status= \"ACCEPTED\"";
             PreparedStatement ps = con.prepareStatement(sql);
-            ResultSet st = ps.executeQuery();
+            ResultSet res = ps.executeQuery();
 
-            while (st.next()) {
-                orderrequest or = new orderrequest();
-                or.setPharmacyID(st.getString("pharmacyid"));
-                or.setSupplierID(st.getString("supplierid"));
-                or.setItem(st.getString("item"));
-                or.setStatus(st.getString("status"));
-                or.setPrice(st.getInt("price"));
-                or.setQuantity(st.getInt("quantity"));
-                or.setOldquantity(st.getInt("oldquantity"));
-//                 p.setCommunity(st.getString("Community"));
-//                 p.setResidence(st.getString("Residence"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
+            while (res.next()) {
+                orderrequest req = new orderrequest();
+                req.setPharmacyID(res.getString("pharmacyid"));
+                req.setSupplierID(res.getString("supplierid"));
+                req.setItem(res.getString("item"));
+                req.setStatus(res.getString("status"));
+                req.setPrice(res.getInt("price"));
+                req.setQuantity(res.getInt("quantity"));
+                req.setOldquantity(res.getInt("oldquantity"));
 
-                orderData1.add(or);
+                orderData1.add(req);
 
             }
 
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
 
@@ -124,28 +107,24 @@ public class orderrequestData {
             Connection con = SQLConnection.dbconnector();
             String sql = "select * from supplierrequest where status= \"PLACED\"";
             PreparedStatement ps = con.prepareStatement(sql);
-            ResultSet st = ps.executeQuery();
+            ResultSet res = ps.executeQuery();
 
-            while (st.next()) {
-                orderrequest or = new orderrequest();
-                or.setPharmacyID(st.getString("pharmacyid"));
-                or.setSupplierID(st.getString("supplierid"));
-                or.setItem(st.getString("item"));
-                or.setStatus(st.getString("status"));
-                or.setPrice(st.getInt("price"));
-                or.setQuantity(st.getInt("quantity"));
-                or.setOldquantity(st.getInt("oldquantity"));
-//                 p.setCommunity(st.getString("Community"));
-//                 p.setResidence(st.getString("Residence"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
+            while (res.next()) {
+                orderrequest req = new orderrequest();
+                req.setPharmacyID(res.getString("pharmacyid"));
+                req.setSupplierID(res.getString("supplierid"));
+                req.setItem(res.getString("item"));
+                req.setStatus(res.getString("status"));
+                req.setPrice(res.getInt("price"));
+                req.setQuantity(res.getInt("quantity"));
+                req.setOldquantity(res.getInt("oldquantity"));
 
-                orderData1.add(or);
+
+                orderData1.add(req);
 
             }
 
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
 

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Model;
 
 import SQLConnection.SQLConnection;
@@ -12,10 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author sudharsan
- */
+
 public class patientPurchaseHistory {
     private ArrayList<patientPurchase> purchaseData;
     
@@ -35,29 +29,25 @@ public class patientPurchaseHistory {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from patientpurchasehistory";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             
-             while(st.next())
+             while(res.next())
              {
-                 patientPurchase p=new patientPurchase();               
-                 p.setPatientUsername(st.getString("username"));                
-                 p.setItem(st.getString("dob"));
-                 p.setItem(st.getString("name"));
-                 p.setQty(st.getInt("qty"));
-                 p.setPrice(st.getInt("price"));
-                 p.setId(st.getString("id"));
-                 p.setStatus(st.getString("status"));
-//                 p.setHospitalName(st.getString("hospital"));
-//                 p.setResidence(st.getString("Residence"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
+                 patientPurchase purchase=new patientPurchase();               
+                 purchase.setPatientUsername(res.getString("username"));                
+                 purchase.setItem(res.getString("dob"));
+                 purchase.setItem(res.getString("name"));
+                 purchase.setQty(res.getInt("qty"));
+                 purchase.setPrice(res.getInt("price"));
+                 purchase.setId(res.getString("id"));
+                 purchase.setStatus(res.getString("status"));
+
                 
-                 purchaseData1.add(p);
+                 purchaseData1.add(purchase);
            
              }
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
@@ -70,29 +60,23 @@ public class patientPurchaseHistory {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from patientpurchasehistory where patientusername ='"+un+"' and status ='"+type+"';";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             
-             while(st.next())
+             while(res.next())
              {
-                 patientPurchase p=new patientPurchase();               
-                 p.setPatientUsername(st.getString("patientusername"));                
-                 p.setItem(st.getString("item"));
-                 //p.setItem(st.getString("name"));
-                 p.setQty(st.getInt("quantity"));
-                 p.setPrice(st.getInt("price"));
-                 p.setId(st.getString("id"));
-                 p.setStatus(st.getString("status"));
-//                 p.setHospitalName(st.getString("hospital"));
-//                 p.setResidence(st.getString("Residence"));
-//                 p.setDoctor(st.getString("Doctor"));
-//                 p.setPhNo(st.getInt("PhoneNumber"));
-                
-                 purchaseData1.add(p);
+                 patientPurchase purchase=new patientPurchase();               
+                 purchase.setPatientUsername(res.getString("patientusername"));                
+                 purchase.setItem(res.getString("item"));
+                 purchase.setQty(res.getInt("quantity"));
+                 purchase.setPrice(res.getInt("price"));
+                 purchase.setId(res.getString("id"));
+                 purchase.setStatus(res.getString("status"));
+
+                 purchaseData1.add(purchase);
            
              }
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
@@ -110,11 +94,9 @@ public class patientPurchaseHistory {
             String qry = "USE test;";
             stmt.executeUpdate(qry);
             qry="INSERT INTO patientpurchasehistory(patientusername, item, quantity, price, status) VALUES ('"+p.getPatientUsername()+"','"+p.getItem()+"','"+p.getQty()+"','"+p.getPrice()+"','"+p.getStatus()+"')";
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         

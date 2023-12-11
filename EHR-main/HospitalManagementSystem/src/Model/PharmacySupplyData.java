@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package Model;
 
 import SQLConnection.SQLConnection;
@@ -12,10 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-/**
- *
- * @author slaks
- */
+
 public class PharmacySupplyData {
     private ArrayList<PharmacySupply> PharmacySupplyData;
 
@@ -33,24 +27,23 @@ public class PharmacySupplyData {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from PharmacySupply";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res=ps.executeQuery();
             
-             while(st.next())
+             while(res.next())
              {
-                 PharmacySupply p=new PharmacySupply();
+                 PharmacySupply supply = new PharmacySupply();
                  
-                 p.setPharmacyId(st.getString("pharmacyid"));
-                 p.setItem(st.getString("item"));
-                 p.setQuantity(st.getString("quantity"));
-                 p.setPrice(st.getString("price"));
+                 supply .setPharmacyId(res.getString("pharmacyid"));
+                 supply .setItem(res.getString("item"));
+                 supply .setQuantity(res.getString("quantity"));
+                 supply .setPrice(res.getString("price"));
                  
                 
-                 PharmacySupplyData1.add(p);
+                 PharmacySupplyData1.add(supply );
            
              }
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
@@ -63,24 +56,23 @@ public class PharmacySupplyData {
             Connection con=SQLConnection.dbconnector();
             String sql="select * from PharmacySupply where pharmacyid = '"+username+"'";
             PreparedStatement ps=con.prepareStatement(sql);
-            ResultSet st=ps.executeQuery();
+            ResultSet res =ps.executeQuery();
             
-             while(st.next())
+             while(res .next())
              {
-                 PharmacySupply p=new PharmacySupply();
+                 PharmacySupply supply =new PharmacySupply();
                  
-                 p.setPharmacyId(st.getString("pharmacyid"));
-                 p.setItem(st.getString("item"));
-                 p.setQuantity(st.getString("quantity"));
-                 p.setPrice(st.getString("price"));
+                 supply .setPharmacyId(res .getString("pharmacyid"));
+                 supply .setItem(res .getString("item"));
+                 supply .setQuantity(res .getString("quantity"));
+                 supply .setPrice(res .getString("price"));
                  
                 
-                 PharmacySupplyData1.add(p);
+                 PharmacySupplyData1.add(supply );
            
              }
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
@@ -94,20 +86,16 @@ public class PharmacySupplyData {
     }
         public void deletePharmacySupply(PharmacySupply pharmacySupply){
         try {
-            // userName
             String userName= pharmacySupply.getPharmacyId();
             Connection con=SQLConnection.dbconnector();
             Statement stmt=con.createStatement();
             String qry = "USE test";
             stmt.executeUpdate(qry);
             qry="DELETE FROM PharmacySupply WHERE username = '"+userName+"'";
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
-            //ResultSet st=ps.executeQuery();
             PharmacySupplyData.remove(pharmacySupply);
              
         } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
             System.out.print(ex.getMessage());
         }
         
@@ -123,12 +111,10 @@ public class PharmacySupplyData {
             stmt.executeUpdate(qry);
             qry="INSERT INTO PharmacySupply(pharmacyid, item, quantity, price) VALUES ('"+pharmacySupply.getPharmacyId()+"','"+pharmacySupply.getItem()+"','"+pharmacySupply.getQuantity()+"','"+pharmacySupply.getPrice()+"')";
 
-            //PreparedStatement ps=con.prepareStatement(qry);
             stmt.executeUpdate(qry);
              
         } catch (SQLException ex) {
 
-            //Logger.getLogger(UserData.class.getName()).log(Level.SEVERE, null, ex);
 
             System.out.print(ex.getMessage());
         }
