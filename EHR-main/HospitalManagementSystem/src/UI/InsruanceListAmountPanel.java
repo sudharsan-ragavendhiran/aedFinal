@@ -9,8 +9,6 @@ public class InsruanceListAmountPanel extends javax.swing.JPanel {
     /**
      * Creates new form InsruanceListAmountPanel
      */
-    Color MouseEnterColor = new Color(255,102,102);
-    Color MouseExitColor = new Color(255,255,255);
     String username;
     public InsruanceListAmountPanel(String username) {
         this.username = username;
@@ -158,42 +156,34 @@ public class InsruanceListAmountPanel extends javax.swing.JPanel {
 
     private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
         // TODO add your handling code here:
-        jLabel1.setBackground(MouseEnterColor);
     }//GEN-LAST:event_jLabel1MouseEntered
 
     private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
         // TODO add your handling code here:
-        jLabel1.setBackground(MouseExitColor);
     }//GEN-LAST:event_jLabel1MouseExited
 
     private void jPanel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseEntered
         // TODO add your handling code here:
-        jPanel1.setBackground(MouseEnterColor);
     }//GEN-LAST:event_jPanel1MouseEntered
 
     private void jPanel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel1MouseExited
         // TODO add your handling code here:
-        jPanel1.setBackground(MouseExitColor);
     }//GEN-LAST:event_jPanel1MouseExited
 
     private void jLabel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseEntered
         // TODO add your handling code here:
-        jLabel2.setBackground(MouseEnterColor);
     }//GEN-LAST:event_jLabel2MouseEntered
 
     private void jLabel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseExited
         // TODO add your handling code here:
-        jLabel2.setBackground(MouseExitColor);
     }//GEN-LAST:event_jLabel2MouseExited
 
     private void jPanel2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseEntered
         // TODO add your handling code here:
-        jPanel2.setBackground(MouseEnterColor);
     }//GEN-LAST:event_jPanel2MouseEntered
 
     private void jPanel2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseExited
         // TODO add your handling code here:
-        jPanel2.setBackground(MouseExitColor);
     }//GEN-LAST:event_jPanel2MouseExited
 
 

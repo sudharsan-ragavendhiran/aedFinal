@@ -29,36 +29,36 @@ public class AdminPanel extends javax.swing.JPanel {
      * Creates new form AdminPanel
      */
     
-    //HospitalData hosData = new HospitalInfo();
-    //pharmacyData pharmData = new pharmacyInfo();
+    //HospitalData hosInfo = new HospitalInfo();
+    //pharmacyData pharmInfo = new pharmacyInfo();
     InsuranceAgencyInfo insuranceData = new InsuranceAgencyInfo();
-    //SupplierData suppData = new SupplierInfo();
+    //SupplierData suppInfo = new SupplierInfo();
     
-    HospitalInfo hosData;
-    UserInfo userData;
-    pharmacyInfo pharmData;
-    SupplierInfo suppData;
+    HospitalInfo hosInfo;
+    UserInfo userInfo;
+    pharmacyInfo pharmInfo;
+    SupplierInfo suppInfo;
     Color MouseEnterColor = new Color(255,102,102);
     Color MouseExitColor = new Color(153,204,255);
-    public AdminPanel(UserInfo userData, HospitalInfo hosData, pharmacyInfo pharmData, SupplierInfo suppData) {
+    public AdminPanel(UserInfo userInfo, HospitalInfo hosInfo, pharmacyInfo pharmInfo, SupplierInfo suppInfo) {
         initComponents();
-        this.hosData = hosData;
-        this.userData = userData;
-        this.pharmData = pharmData;
-        this.suppData = suppData;
+        this.hosInfo = hosInfo;
+        this.userInfo = userInfo;
+        this.pharmInfo = pharmInfo;
+        this.suppInfo = suppInfo;
         
-        populateHospitalTable();
-        populatePharmacyTable();
-        populateUserTable();
-        populateInsuranceTable();
-        populateSupplierTable();
+        loadHospData();
+        loadPharmacyData();
+        loadUserData();
+        loadInsuranceData();
+        loadSupplierData();
     }
     
-    private void populateHospitalTable() {
+    private void loadHospData() {
         DefaultTableModel model = (DefaultTableModel) HospitalTable.getModel();
         model.setRowCount(0);
 
-        for (Hospital hospital : hosData.getHospitalInfoFromDb()) {
+        for (Hospital hospital : hosInfo.getHospitalInfoFromDb()) {
             Object[] row = {hospital.getName(), hospital.getCity(), hospital.getAddress()};
 //            row[0] = hospital.getName();
 //            row[1] = hospital.getCity();
@@ -68,11 +68,11 @@ public class AdminPanel extends javax.swing.JPanel {
         }
     }
     
-    private void populateSupplierTable() {
+    private void loadSupplierData() {
         DefaultTableModel model = (DefaultTableModel) SupplierTable.getModel();
         model.setRowCount(0);
 
-        for (Supplier supp : suppData.getSupplierInfoFromDb()) {
+        for (Supplier supp : suppInfo.getSupplierInfoFromDb()) {
             Object[] row = {supp.getName(), supp.getCity()};
 //            row[0] = supp.getName();
 //            row[1] = supp.getCity();
@@ -102,11 +102,11 @@ public class AdminPanel extends javax.swing.JPanel {
         
     }
     
-    private void populatePharmacyTable() {
+    private void loadPharmacyData() {
         DefaultTableModel model = (DefaultTableModel) PharmacyTable.getModel();
         model.setRowCount(0);
 
-        for (pharmacy pharm : pharmData.getPharmacyInfoFromDb()) {
+        for (pharmacy pharm : pharmInfo.getPharmacyInfoFromDb()) {
             Object[] row = {pharm.getName(), pharm.getCity()};
 //            row[0] = pharm.getName();
 //            row[1] = pharm.getCity();
@@ -116,11 +116,11 @@ public class AdminPanel extends javax.swing.JPanel {
         }
     }
     
-    private void populateUserTable() {
+    private void loadUserData() {
         DefaultTableModel model = (DefaultTableModel) UserTable.getModel();
         model.setRowCount(0);
 
-        for (User us : this.userData.getUserInfoFromDb()) {
+        for (User us : this.userInfo.getUserInfoFromDb()) {
             Object[] row = {us.getName(), us.getOrg(), us.getRole()};
 //            row[0] = us.getName();
 //            row[1] = us.getOrgName();
@@ -131,7 +131,7 @@ public class AdminPanel extends javax.swing.JPanel {
         }
     }
     
-    private void populateInsuranceTable() {
+    private void loadInsuranceData() {
         DefaultTableModel model = (DefaultTableModel) InsuranceTable.getModel();
         model.setRowCount(0);
 
@@ -653,7 +653,7 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void lblCreateUserMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblCreateUserMouseClicked
         // TODO add your handling code here:
-        UserWorkAreaPanel  um = new UserWorkAreaPanel(userData, hosData, pharmData, suppData);
+        UserWorkAreaPanel  um = new UserWorkAreaPanel(userInfo, hosInfo, pharmInfo, suppInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(um);
         login.invalidate();
@@ -680,7 +680,7 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void ManageUserJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageUserJPanelMouseClicked
         // TODO add your handling code here:
-        UserWorkAreaPanel  um = new UserWorkAreaPanel(userData, hosData, pharmData, suppData);
+        UserWorkAreaPanel  um = new UserWorkAreaPanel(userInfo, hosInfo, pharmInfo, suppInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(um);
         login.invalidate();
@@ -739,7 +739,7 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void ManageHospitalJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageHospitalJPanelMouseClicked
         // TODO add your handling code here:
-        HospitalManagementPanel  mh = new HospitalManagementPanel(userData, hosData, pharmData, suppData);
+        HospitalManagementPanel  mh = new HospitalManagementPanel(userInfo, hosInfo, pharmInfo, suppInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(mh);
         login.invalidate();
@@ -748,7 +748,7 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void ManagePharmacyJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManagePharmacyJPanelMouseClicked
         // TODO add your handling code here:
-        PharmacyManagerAdminPanel  mpa = new PharmacyManagerAdminPanel(userData, hosData, suppData, pharmData);
+        PharmacyManagerAdminPanel  mpa = new PharmacyManagerAdminPanel(userInfo, hosInfo, suppInfo, pharmInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(mpa);
         login.invalidate();
@@ -757,7 +757,7 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void lblRegPharmacyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegPharmacyMouseClicked
         // TODO add your handling code here:
-        PharmacyManagerAdminPanel  mpa = new PharmacyManagerAdminPanel(userData, hosData, suppData, pharmData);
+        PharmacyManagerAdminPanel  mpa = new PharmacyManagerAdminPanel(userInfo, hosInfo, suppInfo, pharmInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(mpa);
         login.invalidate();
@@ -766,12 +766,12 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void ManageInsuranceJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageInsuranceJPanelMouseClicked
         // TODO add your handling code here:
-//        PharmacyManagerAdminPanel  mpa = new PharmacyManagerAdminPanel(userData, hosData, suppData, pharmData);
+//        PharmacyManagerAdminPanel  mpa = new PharmacyManagerAdminPanel(userInfo, hosInfo, suppInfo, pharmInfo);
 //        LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
 //        login.setContentPane(mpa);
 //        login.invalidate();
 //        login.validate();
-        InsuranceFirmManagerPanel  mif = new InsuranceFirmManagerPanel(userData, hosData, pharmData, suppData);
+        InsuranceFirmManagerPanel  mif = new InsuranceFirmManagerPanel(userInfo, hosInfo, pharmInfo, suppInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(mif);
         login.invalidate();
@@ -789,7 +789,7 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void ManageSupplierJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ManageSupplierJPanelMouseClicked
         // TODO add your handling code here:
-        SupplierManagementPanel  ms = new SupplierManagementPanel(userData, hosData, pharmData, suppData);
+        SupplierManagementPanel  ms = new SupplierManagementPanel(userInfo, hosInfo, pharmInfo, suppInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(ms);
         login.invalidate();
@@ -798,7 +798,7 @@ public class AdminPanel extends javax.swing.JPanel {
 
     private void lblRegSupplierMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblRegSupplierMouseClicked
         // TODO add your handling code here:
-        SupplierManagementPanel  ms = new SupplierManagementPanel(userData, hosData, pharmData, suppData);
+        SupplierManagementPanel  ms = new SupplierManagementPanel(userInfo, hosInfo, pharmInfo, suppInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(ms);
         login.invalidate();

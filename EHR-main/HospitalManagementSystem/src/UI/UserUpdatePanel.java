@@ -1,7 +1,6 @@
 
 package UI;
 
-import Model.Supplier;
 import Model.User;
 import Model.UserInfo;
 import SQLConnection.SQLConnection;
@@ -11,8 +10,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -22,11 +19,11 @@ public class UserUpdatePanel extends javax.swing.JPanel {
     /**
      * Creates new form UserUpdatePanel
      */
-    UserInfo userData;
-    public UserUpdatePanel(UserInfo userData) {
-        this.userData = userData;
+    UserInfo userInfo;
+    public UserUpdatePanel(UserInfo userInfo) {
+        this.userInfo = userInfo;
         initComponents();
-        populateTable();
+        loadTable();
     }
 
     /**
@@ -309,9 +306,9 @@ public class UserUpdatePanel extends javax.swing.JPanel {
         }
         DefaultTableModel model= (DefaultTableModel) UserSearchTable.getModel();
         User us = (User) model.getValueAt(selectedRowIndex, 0);
-        userData.delUser(us);
+        userInfo.delUser(us);
         JOptionPane.showMessageDialog(this, "Selected row deleted");
-        populateTable();
+        loadTable();
 
     }//GEN-LAST:event_btnDeleteActionPerformed
 
@@ -358,7 +355,7 @@ public class UserUpdatePanel extends javax.swing.JPanel {
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         txtSearchUser.setText("");
-        populateTable();
+        loadTable();
         
         txtName.setText("");
         txtUserName.setText("");
@@ -400,7 +397,7 @@ public class UserUpdatePanel extends javax.swing.JPanel {
             stmt.executeUpdate(qry);
             qry="update UserData set name = '"+newName+"', username = '"+newUserName+"', password = '"+newPassword+"', org = '"+newOrg+"', role = '"+newRole+"' where username = '"+newUserName+"'";
             stmt.executeUpdate(qry);
-            populateTable();
+            loadTable();
              
         } catch (SQLException ex) {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
@@ -417,10 +414,10 @@ public class UserUpdatePanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnUpdateActionPerformed
     
     
-    private void populateTable() {
+    private void loadTable() {
             DefaultTableModel model= (DefaultTableModel) UserSearchTable.getModel();
             model.setRowCount(0);
-            for(User obj : userData.getUserInfoFromDb()){
+            for(User obj : userInfo.getUserInfoFromDb()){
                 Object[] row= new Object[4];
                 row[0] = obj;
                 row[1] = obj.getOrg();

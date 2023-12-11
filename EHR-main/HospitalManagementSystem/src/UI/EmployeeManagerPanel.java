@@ -17,12 +17,12 @@ public class EmployeeManagerPanel extends javax.swing.JPanel {
      * Creates new form EmployeeManagerPanel
      */
     String username;
-    InsurancePolicyInfo ipD;
-    public EmployeeManagerPanel(String username, InsurancePolicyInfo ipD) {
+    InsurancePolicyInfo insPolicyInfo;
+    public EmployeeManagerPanel(String username, InsurancePolicyInfo insPolicyInfo) {
         initComponents();
         this.username = username;
-        this.ipD = ipD;
-        populateTable();
+        this.insPolicyInfo = insPolicyInfo;
+        loadTable();
     }
 
     /**
@@ -332,7 +332,7 @@ public class EmployeeManagerPanel extends javax.swing.JPanel {
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         txtSearchUser.setText("");
-        populateTable();
+        loadTable();
         
         txtPName.setText("");
         txtIn.setText("");
@@ -352,7 +352,7 @@ public class EmployeeManagerPanel extends javax.swing.JPanel {
             stmt.executeUpdate(qry);
             qry="update insurancepolicydata set id = '"+newPid+"' where patientusername = '"+newP+"'";
             stmt.executeUpdate(qry);
-            populateTable();
+            loadTable();
              
         } catch (SQLException ex) {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
@@ -372,9 +372,9 @@ public class EmployeeManagerPanel extends javax.swing.JPanel {
         }
         DefaultTableModel model= (DefaultTableModel) PolicyTable.getModel();
         InsurancePolicy ip = (InsurancePolicy) model.getValueAt(selectedRowIndex, 0);
-        ipD.delInsurPolicy(ip);
+        insPolicyInfo.delInsurPolicy(ip);
         JOptionPane.showMessageDialog(this, "Selected row deleted");
-        populateTable();
+        loadTable();
         
         txtPName.setText("");
         txtIn.setText("");
@@ -382,10 +382,10 @@ public class EmployeeManagerPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnDeleteActionPerformed
 
 
-    private void populateTable() {
+    private void loadTable() {
             DefaultTableModel model= (DefaultTableModel) PolicyTable.getModel();
             model.setRowCount(0);
-            for(InsurancePolicy obj : ipD.getInsurancePolicyInfoFromDb()){
+            for(InsurancePolicy obj : insPolicyInfo.getInsurancePolicyInfoFromDb()){
                 Object[] row= new Object[3];
                 row[0] = obj;
                 row[1] = obj.getInsuranceAgencyId();

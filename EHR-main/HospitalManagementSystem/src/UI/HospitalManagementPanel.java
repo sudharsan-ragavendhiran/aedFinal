@@ -14,18 +14,16 @@ public class HospitalManagementPanel extends javax.swing.JPanel {
     /**
      * Creates new form HospitalManagementPanel
      */
-    UserInfo userData;
-    HospitalInfo hosData;
-    pharmacyInfo pharmData;
-    SupplierInfo suppData;
-    Color MouseEnterColor = new Color(255,102,102);
-    Color MouseExitColor = new Color(153,204,255);
-    public HospitalManagementPanel(UserInfo userData, HospitalInfo hosData, pharmacyInfo pharmData, SupplierInfo suppData) {
+    UserInfo userInfo;
+    HospitalInfo hosInfo;
+    pharmacyInfo pharmInfo;
+    SupplierInfo suppInfo;
+    public HospitalManagementPanel(UserInfo userInfo, HospitalInfo hosInfo, pharmacyInfo pharmInfo, SupplierInfo suppInfo) {
         initComponents();
-        this.userData = userData;
-        this.hosData = hosData;
-        this.pharmData = pharmData;
-        this.suppData = suppData;
+        this.userInfo = userInfo;
+        this.hosInfo = hosInfo;
+        this.pharmInfo = pharmInfo;
+        this.suppInfo = suppInfo;
     }
 
     /**
@@ -292,12 +290,10 @@ public class HospitalManagementPanel extends javax.swing.JPanel {
 
     private void lblUserCreateMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserCreateMouseEntered
         // TODO add your handling code here:
-        lblUserCreate.setBackground(MouseEnterColor);
     }//GEN-LAST:event_lblUserCreateMouseEntered
 
     private void lblUserCreateMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblUserCreateMouseExited
         // TODO add your handling code here:
-        lblUserCreate.setBackground(MouseExitColor);
     }//GEN-LAST:event_lblUserCreateMouseExited
 
     private void CreateHospitalJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateHospitalJPanelMouseClicked
@@ -308,49 +304,43 @@ public class HospitalManagementPanel extends javax.swing.JPanel {
 
     private void CreateHospitalJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateHospitalJPanelMouseEntered
         // TODO add your handling code here:
-        CreateHospitalJPanel.setBackground(MouseEnterColor);
     }//GEN-LAST:event_CreateHospitalJPanelMouseEntered
 
     private void CreateHospitalJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_CreateHospitalJPanelMouseExited
         // TODO add your handling code here:
-        CreateHospitalJPanel.setBackground(MouseExitColor);
     }//GEN-LAST:event_CreateHospitalJPanelMouseExited
 
     private void UserViewlblMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserViewlblMouseClicked
         // TODO add your handling code here:
-        HospitalDetailsAdminPanel vha = new HospitalDetailsAdminPanel(hosData);
+        HospitalDetailsAdminPanel vha = new HospitalDetailsAdminPanel(hosInfo);
         jSplitPane1.setRightComponent(vha);
     }//GEN-LAST:event_UserViewlblMouseClicked
 
     private void UserViewlblMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserViewlblMouseEntered
         // TODO add your handling code here:
-        UserViewlbl.setBackground(MouseEnterColor);
     }//GEN-LAST:event_UserViewlblMouseEntered
 
     private void UserViewlblMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_UserViewlblMouseExited
         // TODO add your handling code here:
-        UserViewlbl.setBackground(MouseExitColor);
     }//GEN-LAST:event_UserViewlblMouseExited
 
     private void ViewHospitalJPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewHospitalJPanelMouseClicked
         // TODO add your handling code here:
-        HospitalDetailsAdminPanel vha = new HospitalDetailsAdminPanel(hosData);
+        HospitalDetailsAdminPanel vha = new HospitalDetailsAdminPanel(hosInfo);
         jSplitPane1.setRightComponent(vha);
     }//GEN-LAST:event_ViewHospitalJPanelMouseClicked
 
     private void ViewHospitalJPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewHospitalJPanelMouseEntered
         // TODO add your handling code here:
-        ViewHospitalJPanel.setBackground(MouseEnterColor);
     }//GEN-LAST:event_ViewHospitalJPanelMouseEntered
 
     private void ViewHospitalJPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ViewHospitalJPanelMouseExited
         // TODO add your handling code here:
-        ViewHospitalJPanel.setBackground(MouseExitColor);
     }//GEN-LAST:event_ViewHospitalJPanelMouseExited
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         // TODO add your handling code here:
-        AdminPanel  ah = new AdminPanel(userData, hosData, pharmData, suppData);
+        AdminPanel  ah = new AdminPanel(userInfo, hosInfo, pharmInfo, suppInfo);
         LoginPanel login = (LoginPanel) SwingUtilities.getRoot(this);
         login.setContentPane(ah);
         login.invalidate();

@@ -6,20 +6,15 @@ import Model.UserInfo;
 import SQLConnection.SQLConnection;
 import static java.awt.image.ImageObserver.HEIGHT;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.InputMismatchException;
-import java.util.Properties;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
-import java.util.Properties;
-import javax.mail.*;  
-import javax.mail.internet.*;  
-import javax.activation.*;  
+
 
 
 public class UserCreatePanel extends javax.swing.JPanel {
@@ -71,8 +66,6 @@ public class UserCreatePanel extends javax.swing.JPanel {
         OrgComboBox = new javax.swing.JComboBox<>();
         jLabel14 = new javax.swing.JLabel();
         RoleComboBox = new javax.swing.JComboBox<>();
-        txtDOB1 = new javax.swing.JTextField();
-        btnSave2 = new javax.swing.JButton();
         btnSave1 = new javax.swing.JButton();
         btnSave = new javax.swing.JButton();
 
@@ -291,36 +284,20 @@ public class UserCreatePanel extends javax.swing.JPanel {
 
         RoleComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Patient" }));
 
-        btnSave2.setBackground(new java.awt.Color(255, 0, 0));
-        btnSave2.setFont(new java.awt.Font("Papyrus", 1, 13)); // NOI18N
-        btnSave2.setForeground(new java.awt.Color(255, 255, 255));
-        btnSave2.setText("send otp");
-        btnSave2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSave2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(217, 217, 217)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addComponent(btnSave2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(txtDOB1, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13)
-                            .addComponent(jLabel14))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(RoleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(OrgComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(RoleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(OrgComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -333,10 +310,6 @@ public class UserCreatePanel extends javax.swing.JPanel {
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel14)
                     .addComponent(RoleComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(57, 57, 57)
-                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtDOB1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSave2))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -432,25 +405,7 @@ public class UserCreatePanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnSave1ActionPerformed
 
     private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSaveActionPerformed
-        // TODO add your handling code here:
-        String otp = null;
-        try{
-            
-        Connection con=SQLConnection.dbconnector();    
-        //JOptionPane.showMessageDialog(this,txtEmail.getText());
-        String sql="select * from otp where email ='"+txtEmail.getText()+"';";
-        PreparedStatement ps=con.prepareStatement(sql);
-        ResultSet st=ps.executeQuery();
-        
-        while(st.next()){
-              otp = st.getString("otp");
-        }
-        //JOptionPane.showMessageDialog(this,otp , "warning", HEIGHT);
-        
-        }catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.print(ex.getMessage());
-        }
+
         UserInfo userData = new UserInfo();
         String username, password, name, role, org, orgName, dob, gender, email, number;
         username = txtUsername.getText();
@@ -463,53 +418,29 @@ public class UserCreatePanel extends javax.swing.JPanel {
         org = "Patient";
         role = "patient";
         orgName = "Patient";
-        
-//        if(org == "Patient"){
-//        orgName = "Patient";
-//    }else if(org == "System"){
-//        orgName = "System";
-//    }else{
-//        orgName = jComboBox1.getSelectedItem().toString();
-//    }
-        
-        //validation
-        //username
-        try{
-                    //username
-            if(!txtDOB1.getText().equals(otp)){
-                throw new InputMismatchException("Invalid otp");
-            }        
+        try{      
             if(username.isEmpty()){
                 throw new InputMismatchException("Invalid username");
                 
             }
             else{
                     Connection con=SQLConnection.dbconnector();
-                    //JOptionPane.showMessageDialog(this, "connection Sucess");
                     Statement stmt=con.createStatement();
-//                    String query = "USE test_app;";
-//                    stmt.executeUpdate(query);
                     String query="select username,password,role from UserData where username='"+username+"';";
 
                     ResultSet rst=stmt.executeQuery(query);
                      if (rst.next())
                     {
                         throw new InputMismatchException("Invalid username");
-                        //String role=rst.getString("role_");
-                        //JOptionPane.showMessageDialog(this, "LoginPanel Sucess", "", HEIGHT);
-                        //JOptionPane.showMessageDialog(this, role, query, HEIGHT);
-
                     }
                 
 
                    
                 
             }
-            //password
             if(password.isEmpty() || password.length()<3){
                 throw new InputMismatchException("Invalid password");
             }
-            //name
             if(txtFName.getText().length()<4 || txtLName.getText().length() <4){
                 throw new InputMismatchException("Invalid FirstName and LastName");
             }
@@ -553,86 +484,6 @@ public class UserCreatePanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_btnSaveActionPerformed
 
-    private void btnSave2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSave2ActionPerformed
-        // TODO add your handling code here:
-        int min = 1000;  
-        int max = 9999;
-        int b = (int)(Math.random()*(max-min+1)+min);  
-        //JOptionPane.showMessageDialog(this,b);
-        String host="smtp.gmail.com";  
-       final String user="aedhrms1@gmail.com";//change accordingly  
-        final String password="rruoxcejaqbxphwq";//change accordingly  
-    
-    //String to="venugopalbalamurug.l@northeastern.edu";//change accordingly  
-    String to = txtEmail.getText();
-   //Get the session object  
-   Properties props = new Properties();  
-
-   props.put("mail.smtp.auth", "true");
-   props.put("mail.smtp.starttls.enable", "true");
-   props.put("mail.smtp.host", "smtp.gmail.com");
-   props.put("mail.smtp.port", "587");
-   props.put("mail.smtp.ssl.trust", "smtp.gmail.com");
-   props.put("mail.smtp.debug", "true");
-   props.put("mail.smtp.ssl.protocols", "TLSv1.2");
-     
-   Session session = Session.getDefaultInstance(props,  
-    new javax.mail.Authenticator() {  
-      protected PasswordAuthentication getPasswordAuthentication() {  
-    return new PasswordAuthentication(user,password);  
-      }  
-    });  
-  
-   //Compose the message  
-    try {  
-     MimeMessage message = new MimeMessage(session);  
-     message.setFrom(new InternetAddress(user));  
-     message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));  
-     message.setSubject("AED HRMS OTP");  
-     message.setText("To login to AED HRMS the one time password is "+String.valueOf(b)+" .");  
-       
-    //send the message  
-     Transport.send(message);  
-  
-     System.out.println("message sent successfully...");  
-     try {
-
-          
-            Connection con=SQLConnection.dbconnector();
-            Statement stmt=con.createStatement();
-            String qry = "USE test";
-            stmt.executeUpdate(qry);
-            qry = "DELETE FROM otp WHERE email='"+to+"';";
-            stmt.executeUpdate(qry);
-            qry="INSERT INTO otp VALUES ('"+to+"','"+String.valueOf(b)+"')";
-//            String sql="select * from otp where email ='"+to+"';";
-//            PreparedStatement ps=con.prepareStatement(sql);
-//            ResultSet st=ps.executeQuery();
-//            boolean count= false;
-//             while(st.next()){
-//                  count = true;
-//                 break;
-//             }
-//             if(count){
-//                 
-//                 qry="UPDATE otp SET otp='"+String.valueOf(b)+"'WHERE email='"+to+"';";
-//             }else{
-//                 
-//             }
-                 
-            
-            //PreparedStatement ps=con.prepareStatement(qry);
-            stmt.executeUpdate(qry);
-             
-        } catch (SQLException ex) {
-            //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
-            System.out.print(ex.getMessage());
-        }
-   
-     } catch (MessagingException e) {e.printStackTrace();}
-    
-    }//GEN-LAST:event_btnSave2ActionPerformed
-
        private void clearData() {
         //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
         txtUsername.setText("");
@@ -645,10 +496,7 @@ public class UserCreatePanel extends javax.swing.JPanel {
         txtPhnNo.setText("");
         OrgComboBox.setSelectedIndex(0);
         String[] roleArray = null;
-        //RoleComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(roleArray));
-        
-        txtDOB1.setText("");
-        //jComboBox1.setSelectedIndex(0);
+    
     } 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -656,7 +504,6 @@ public class UserCreatePanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> RoleComboBox;
     private javax.swing.JButton btnSave;
     private javax.swing.JButton btnSave1;
-    private javax.swing.JButton btnSave2;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -680,7 +527,6 @@ public class UserCreatePanel extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JTextField txtDOB;
-    private javax.swing.JTextField txtDOB1;
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtFName;
     private javax.swing.JTextField txtLName;

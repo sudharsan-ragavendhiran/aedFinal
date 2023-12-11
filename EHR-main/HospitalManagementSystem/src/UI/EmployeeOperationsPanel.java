@@ -21,11 +21,11 @@ public class EmployeeOperationsPanel extends javax.swing.JPanel {
     /**
      * Creates new form EmployeeOperationsPanel
      */
-    UserInfo userData;
-    public EmployeeOperationsPanel(UserInfo userData) {
+    UserInfo userInfo;
+    public EmployeeOperationsPanel(UserInfo userInfo) {
         initComponents();
-        this.userData = userData;
-        populateTable();
+        this.userInfo = userInfo;
+        loadTableData();
     }
 
     /**
@@ -316,7 +316,7 @@ public class EmployeeOperationsPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         txtSearchUser.setText("");
         
-        populateTable();
+        loadTableData();
         
         txtName.setText("");
         txtUserName.setText("");
@@ -358,7 +358,7 @@ public class EmployeeOperationsPanel extends javax.swing.JPanel {
             stmt.executeUpdate(qry);
             qry="update userdata set name = '"+newName+"', username = '"+newUserName+"', org = '"+newOrg+"', orgName = '"+newOrgName+"', role = '"+newRole+"' where role = '"+newRole+"'";
             stmt.executeUpdate(qry);
-            populateTable();
+            loadTableData();
              
         } catch (SQLException ex) {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
@@ -380,9 +380,9 @@ public class EmployeeOperationsPanel extends javax.swing.JPanel {
         }
         DefaultTableModel model= (DefaultTableModel) EmployeeTable.getModel();
         User us = (User) model.getValueAt(selectedRowIndex, 0);
-        userData.delUser(us);
+        userInfo.delUser(us);
         JOptionPane.showMessageDialog(this, "Selected row deleted");
-        populateTable();
+        loadTableData();
         
         txtName.setText("");
         txtUserName.setText("");
@@ -433,10 +433,10 @@ public class EmployeeOperationsPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnSearchActionPerformed
 
 
-    private void populateTable() {
+    private void loadTableData() {
             DefaultTableModel model= (DefaultTableModel) EmployeeTable.getModel();
             model.setRowCount(0);
-            for(User obj : userData.getEmployeesFromDb()){
+            for(User obj : userInfo.getEmployeesFromDb()){
                 Object[] row= new Object[4];
                 row[0] = obj;
                 row[1] = obj.getRole();

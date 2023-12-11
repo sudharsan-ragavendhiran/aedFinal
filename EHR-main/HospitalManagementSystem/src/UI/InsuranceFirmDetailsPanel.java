@@ -20,11 +20,11 @@ public class InsuranceFirmDetailsPanel extends javax.swing.JPanel {
     /**
      * Creates new form InsuranceFirmDetailsPanel
      */
-    InsuranceAgencyInfo iad;
+    InsuranceAgencyInfo insAgency;
     public InsuranceFirmDetailsPanel() {
         initComponents();
-        iad = new InsuranceAgencyInfo();
-        populateTable();
+        insAgency = new InsuranceAgencyInfo();
+        loadData();
     }
 
     /**
@@ -363,9 +363,9 @@ public class InsuranceFirmDetailsPanel extends javax.swing.JPanel {
         }
         DefaultTableModel model= (DefaultTableModel) InsuranceTable.getModel();
         InsuranceAgency ia = (InsuranceAgency) model.getValueAt(selectedRowIndex, 0);
-        iad.deleteInsAgency(ia);
+        insAgency.deleteInsAgency(ia);
         JOptionPane.showMessageDialog(this, "Selected row deleted");
-        populateTable();
+        loadData();
         txtHName.setText("");
         txtID.setText("");
         txtAddress.setText("");
@@ -416,7 +416,7 @@ public class InsuranceFirmDetailsPanel extends javax.swing.JPanel {
     private void btnRefreshActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefreshActionPerformed
         // TODO add your handling code here:
         txtSearchUser.setText("");
-        populateTable();
+        loadData();
         
         txtHName.setText("");
         txtID.setText("");
@@ -442,7 +442,7 @@ public class InsuranceFirmDetailsPanel extends javax.swing.JPanel {
             stmt.executeUpdate(qry);
             qry="update InsuranceagencyData set id = '"+newId+"', name = '"+newName+"', city = '"+newCity+"', address = '"+newAddress+"', state = '"+newState+"', areacode = '"+newAreacode+"' where id = '"+newId+"'";
             stmt.executeUpdate(qry);
-            populateTable();
+            loadData();
              
         } catch (SQLException ex) {
             //Logger.getLogger(DoctorDirectory.class.getName()).log(Level.SEVERE, null, ex);
@@ -457,10 +457,10 @@ public class InsuranceFirmDetailsPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_btnUpdateActionPerformed
 
 
-    private void populateTable() {
+    private void loadData() {
             DefaultTableModel model= (DefaultTableModel) InsuranceTable.getModel();
             model.setRowCount(0);
-            for(InsuranceAgency obj : iad.getInsuranceAgencyInfoFromDb()){
+            for(InsuranceAgency obj : insAgency.getInsuranceAgencyInfoFromDb()){
                 Object[] row= new Object[3];
                 row[0] = obj;
                 row[1] = obj.getId();
